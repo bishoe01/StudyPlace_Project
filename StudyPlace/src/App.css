@@ -1,15 +1,5 @@
-.navbar{
-  background-color: skyblue;
-  display: flex;
-  justify-content: space-between;
-}
-
-.navbar__logo{
-  width: 200px;
-  height: 40px;
-}
-
-.navbar__profile{
-  width: 30px;
-  height: 30px;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
