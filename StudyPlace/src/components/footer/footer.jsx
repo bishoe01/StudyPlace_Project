@@ -7,8 +7,9 @@ function Footer(props) {
             <div className={styles.logoContainer}>
                 <i className={`fa-brands fa-github ${styles.logo}`}></i>
                 <i className={`fa-solid fa-comment-dots ${styles.logo}`}></i>
+                <i className={`fa-brands fa-instagram ${styles.logo}`}></i>
             </div>
-            <span>@2022 SOFTWARE,ICT ERICA</span>
+            <span className={styles.number}>010-xxxx-xxxx</span>
             
         </footer>
     );
