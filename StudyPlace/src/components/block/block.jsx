@@ -5,12 +5,9 @@ function Block({imgsrc, linkto ,name}) {
     return (
         <div className={styles.block}>
         <Link to={linkto}>
-        <img className={styles.logo} src={imgsrc} alt="" />
+        <img className={styles.logo} src={imgsrc} alt={name} />
         </Link>
         <span className={styles.linkDetails}>{name}</span>
-
-
-            
         </div>
     );
 }

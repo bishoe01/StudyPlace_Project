@@ -1,15 +1,18 @@
+@value makerBlack,makerLightGrey from "../../common/colors.css";
+
 .section{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
+    align-items: center;
 }
 .department{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(78, 94, 101);
+    background-color: #D7E9F7;
 }
 .block{
     display: flex;
@@ -39,4 +42,19 @@
     padding: 2rem;
     margin: 2rem;
     /* transition: all 300ms ease-in; */
+}
+
+.graphSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: makerLightGrey;
+    border-bottom: 2px solid white;
+}
+
+.graph{
+    margin: 2rem;
+    width: 100%;
+    height: 40vh;
+    object-fit: scale-down;
 }

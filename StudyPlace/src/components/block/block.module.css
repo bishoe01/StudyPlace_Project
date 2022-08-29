@@ -1,3 +1,4 @@
+@value makerWhite from '../../common/colors.css';
 .block{
     display: flex;
     flex-direction: column;
@@ -10,18 +11,20 @@
 }
 .linkDetails{
     position: absolute;
-    transform: translateY(70px);
-    color: black;
+    transform: translateY(105px);
+    color: rgba(0, 0, 0, 0.888);
+    font-size: larger;
+    font-weight: 500;
     transition: all 200ms ease-in;
     text-decoration-style: none;
 }
 
 .logo{
-    background: white;
+    background: makerWhite;
     border-radius: 20%;
     cursor: pointer;
-    padding: 2rem;
-    margin: 2rem;
+    margin: 3rem;
+    width: 250px;
     /* transition: all 300ms ease-in; */
 }
 .block:hover{

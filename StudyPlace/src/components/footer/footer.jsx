@@ -10,6 +10,7 @@ function Footer(props) {
                 <i className={`fa-brands fa-instagram ${styles.logo}`}></i>
             </div>
             <span className={styles.number}>010-xxxx-xxxx</span>
+            <i className="fa-solid fa-phone"></i>
             
         </footer>
     );
