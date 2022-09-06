@@ -6,7 +6,6 @@ function Department(props) {
     return (
         <div>
             <section className={styles.graphSection}>
-                <img className={styles.graph} src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" alt="" />
                 <button className={styles.down}><i className={`fa-solid fa-arrow-down`}></i></button>
             </section>
         <section className={styles.section}>

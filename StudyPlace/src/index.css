@@ -1,2 +1,13 @@
 :root{
 }
+@font-face {
+    font-family: english;
+    src: url('../Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: korean;
+    src: url(../NotoSansKR-Regular.otf);
+}
+*{
+    font-family: korean;
+}
