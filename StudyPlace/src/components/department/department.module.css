@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #D7E9F7;
+    background-color: #F3F7FF;
 }
 .block{
     display: flex;
@@ -54,7 +54,7 @@
     border-bottom: 2px solid white;
     object-fit:contain;
     background: url(https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1406&q=80) no-repeat;
-    background-size: 100% 80vh f;
+    background-size: 100% 80vh;
     overflow:visible;
     padding: 1px;
     background-position: center;

@@ -1,27 +1,73 @@
+
 .footer{
-    padding-top: 1rem;
+
     display: flex;
     width: 100%;
-    height: auto;
-    background-color: rgb(59, 61, 70);
-    flex-direction: column;
-    align-items: center;
+    padding-top: 40px;
+    background-color:#5A8DFF;
+    height: 220px;
     color:white;
 }
 
-
-.logoContainer{
-    margin: 0;
+.leftContainer{
     display: flex;
-    padding: 0;
+    flex-direction: column;
+    padding-left: 60px;
+    width: 30%;
+    align-items: flex-start;
+}
+.h2{
+    font-size: 28px;
+}
+.h2::first-letter{
+    font-size: 34px;
+    color: skyblue;
+}
+.email,.tel{
+    font-size: 18px;
+    padding: 5px 0px;
+}
+.copyright{
+    margin: 0px;
+    font-size: 18px;
+    color: gray;
+}
+/* right */
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+.navbtn{
+    color: white;
+    font-size: 22px;
+    padding: 0 80px;
+}
+.navbtn:hover{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+/* logo */
+.logos{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    padding-top: 40px;
 }
 .logo{
     width: 30px;
     height: 30px;
-    padding: 1.5rem;
+    padding: 0 80px;
     transition: all 200ms ease-in;
     cursor: pointer;
 }
+
+
 
 
 .logo:hover{
