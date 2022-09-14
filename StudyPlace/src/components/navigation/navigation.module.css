@@ -18,6 +18,7 @@ nav{
     position: relative;
     width: 180px;
     margin-left: 4rem;
+    cursor: pointer;
 }
 
 .links{
@@ -57,7 +58,7 @@ nav{
 
 .navbtn:hover{
     text-decoration: none;
-    color: greenyellow;
+    color: black;
 }
 li,a,button {
     font-size: 16px;

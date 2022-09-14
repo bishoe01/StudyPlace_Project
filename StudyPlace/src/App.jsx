@@ -4,7 +4,15 @@ import Footer from './components/footer/footer';
 import Navigation from './components/navigation/navigation';
 import { Routes, Route, Link } from "react-router-dom";
 import Rent from './components/Rent/rent';
+import { useState } from 'react';
 function App() {
+  const [user, setuser] = useState([{
+    id :1 ,
+    name : "Kim",
+    age: 23,
+    department : "Software",
+    grade : 3,
+  }]);
   return (
     <>
     <Navigation/>
