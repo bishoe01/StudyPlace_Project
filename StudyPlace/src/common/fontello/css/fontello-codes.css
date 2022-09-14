@@ -1,0 +1,13 @@
+.icon-mail:before {
+  content: '\e800';
+} /* '' */
+.icon-lock:before {
+  content: '\e801';
+  margin-bottom: 20px;
+} /* '' */
+.icon-camera-outline:before {
+  content: '\e802';
+} /* '' */
+.icon-building:before {
+  content: '\f0f7';
+} /* '' */

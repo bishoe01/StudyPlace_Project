@@ -4,7 +4,9 @@ import Footer from './components/footer/footer';
 import Navigation from './components/navigation/navigation';
 import { Routes, Route, Link } from "react-router-dom";
 import Rent from './components/Rent/rent';
-import { useState } from 'react';
+import Profile from './components/Profile/profile'
+import Notice from './components/Notice/notice';
+import { Profiler, useState } from 'react';
 function App() {
   const [user, setuser] = useState([{
     id :1 ,
@@ -19,6 +21,8 @@ function App() {
     <Routes>
         <Route path="/" element={<Department/>} />
         <Route path="engineer" element={<Rent/>} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/notice" element={<Notice/>} />
       </Routes>
     <Footer/>
 
