@@ -17,16 +17,9 @@ function Navigation() {
                 <li><Link to="/profile" className={styles.navbtn}>PROFILE</Link></li >
                 <li><Link to="/settings" className={styles.navbtn} >SETTINGS</Link></li>
             </ul>
-            <div>
-                <ul className={styles.etc}>
-                    {/* <li>Log In</li> */}
-                    <li className={styles.profile} 
-                    onClick={() => {
-                        setSetting(!setting);
-                        setnone("");
-                    }}><i className="fa-solid fa-gear"></i></li>
-                </ul>
-                {setting && <SettingModal none={none}/>}
+            <div className={styles.nav__btn}>
+                <button className={styles.btn__reserve}>예약 확인</button>
+                <button className={styles.btn__profile}>프로필 수정</button>
                 
             </div>
         </nav>
@@ -35,16 +28,3 @@ function Navigation() {
 
 export default Navigation;
 
-
-
-function SettingModal({none}) {
-    return (
-        <section className={styles.settingModal}>
-            <ul className={styles.setUI}>
-            <li className={styles.settingList}>프로필 설정</li>
-                <li className={styles.settingList}>예약 확인</li>
-                <li className={styles.settingList}>로그아웃</li>
-            </ul>
-        </section>
-    );
-}

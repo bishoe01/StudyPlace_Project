@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './footer.module.css';
 function Footer(props) {
+    const navigate = useNavigate();
     return (
         <footer className={styles.footer}>
             <section className={styles.leftContainer}>

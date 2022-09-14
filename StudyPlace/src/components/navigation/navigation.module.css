@@ -1,11 +1,11 @@
-
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
     background-color: white;
-    height: auto;
+    width: 100%;
+    height: 80px;    
     border-bottom: 0.5px solid rgb(24, 25, 47);
 }
 .title{
@@ -21,7 +21,10 @@ nav{
 }
 
 .links{
+    display: flex;
+    flex-grow: 2;
     list-style: none;
+    padding-left: 20px;
     margin: 0;
 }
 .etc{
@@ -41,8 +44,11 @@ nav{
     color: skyblue;
 }
 .links li{
-    display: inline-block;
-    padding: 2px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    height: 80px;
+    padding: 0 20px;
+    line-height: 80px;
 }
 
 .navbtn{
@@ -54,8 +60,8 @@ nav{
     color: greenyellow;
 }
 li,a,button {
-    font-size: 18px;
-    color: black;
+    font-size: 16px;
+    color: #5A8DFF;
     text-decoration: none;
 }
 
@@ -82,4 +88,20 @@ li,a,button {
     border: 0.5px dotted black;
     transition: all 200ms ease-in;
     
+}
+
+.nav__btn{
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+}
+.btn__reserve,.btn__profile{
+    color: white;
+    background-color: #5A8DFF;
+    padding: 0 28px;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
 }

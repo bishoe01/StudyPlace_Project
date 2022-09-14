@@ -1,13 +1,19 @@
 :root{
 }
-@font-face {
-    font-family: english;
-    src: url('../Roboto-Regular.ttf');
-}
-@font-face {
+
+/* @font-face {
     font-family: korean;
     src: url(../NotoSansKR-Regular.otf);
+} */
+@font-face {
+    font-family: english;
+    src: url('./fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf');
 }
+/* @font-face {
+    font-family: english;
+    font-weight: 400;
+    src: url('./fonts/ROBOTO/Roboto-Regular.ttf');
+} */
 *{
-    font-family: korean;
+    font-family: english;
 }
