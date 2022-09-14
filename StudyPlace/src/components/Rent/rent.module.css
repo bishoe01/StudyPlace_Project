@@ -23,11 +23,6 @@
     margin: 0;
 }
 
-.info{
-    width: 100%;
-    display: inline-flex;
-}
-
 .roomImg{
     padding: 4rem;
     margin-left: 4rem;
@@ -62,72 +57,48 @@
 /* Modal Section */
 
 .modal{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    background-color: #fff;
+    background-color: white;
     height: 660px;
     display: flex;
     position: relative;
     flex-direction: column;
-}
-
-h3{
-    text-align: center;
-}
-.month{
-    text-align: center;
-    color: white;
-    border-radius: 10px;
-    color: black;
+    border: 1px solid lightblue;
     margin-bottom: 20px;
 }
-.month h2{
-    margin : 0;
-    font-size: 30px;
-}
-.ul{
-    display: block;
-}
-.ul li{
-    color: black;
-    cursor: pointer;
-    background-color: white;
-    padding: 10px 0px;
-    margin: 4px 0;
+
+.rent__header{
+    height: 58px;
+    background-color: #5A8DFF;
     border-radius: 10px;
-    text-align: center;
+    color: white;
+}
+.rent__title{
+    line-height: 58px; 
+    font-size: 20px;   
+    padding-left: 10px;
+}
+
+.selection{
+    display: flex;
     
 }
-.dateList{
-    display: flex;
-    flex-direction: column;
-
+h3{
+    margin-bottom: 0px;
 }
-.dateList li{
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    margin: 4px 0px;
-    border-radius: 10px;
-    color: black;
+.selection__room{
+    flex-grow: 2;
+    padding-left: 20px;
+    height: 100px;
 }
-.dateList li::first-letter{
-    color: black;
+.selection__member{
+    flex-grow: 1;
 }
-.member{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.selection__date{
+    flex-grow: 1;
 }
 
-
-.member li{
-    cursor: pointer;
-    text-align: center;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    margin: 6px 0px;
-    font-size: 24px;
-
+.h3{
+    padding: 20px 0;
 }
