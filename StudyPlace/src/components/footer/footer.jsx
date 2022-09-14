@@ -5,7 +5,7 @@ function Footer(props) {
     return (
         <footer className={styles.footer}>
             <section className={styles.leftContainer}>
-                <h2 className={styles.h2}>HY-Together</h2>
+                    <img className={styles.together} src="./imgs/HY-Together/4.svg" alt="" />
                 <p>
                     <h6 className={styles.tel}>TEL +82-10-3733-0690</h6>
                     <h6 className={styles.email}>Email : contact@hanyang.ac.kr</h6>
