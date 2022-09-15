@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container, Form, Tab, Tabs } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import RentBox from './rentbox/rentbox';
 function Rent(props) {
 
     const today = new Date().getDate();
@@ -33,22 +34,9 @@ export default Rent;
 
 function ReserveModal({ canReserve }) {
     return (
-        <modal className={styles.modal}>
-            <div className={styles.rent__header}>
-                <h4 className={styles.rent__title}>팀플실 예약하기</h4>
-            </div>
-            <section className={styles.selection}>
-                <div className={styles.selection__room}>
-                    <h3 className={styles.h3}>팀플실</h3>
-                </div>
-                <div className={styles.selection__member}>
-                <h3 className={styles.h3}>인원수</h3>
-                </div>
-                <div className={styles.selection__date}>
-                <h3 className={styles.h3}>팀플실</h3>
-                </div>
-            </section>
-        </modal>
+            <RentBox/>
     );
 }
+
+
 
