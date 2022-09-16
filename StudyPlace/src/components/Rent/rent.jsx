@@ -1,42 +1,29 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'antd';
 import styles from './rent.module.css';
 import { useNavigate } from 'react-router-dom';
-import { Container, Form, Tab, Tabs } from 'react-bootstrap';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import RentBox from './rentbox/rentbox';
-function Rent(props) {
-
-    const today = new Date().getDate();
-    let canReserve = [];
-    for (let i = today; i < today + 7; i++) {
-        canReserve.push(i);
-    }
-    const navigate = useNavigate();
-    const [modal, setModal] = useState(false);
-    const openModal = () => {
-        setModal(!modal);
-    }
-    return (
-        <section className={styles.section}>
-            <div className={styles.mapSection}>
-                <img className={styles.map} src="https://images.unsplash.com/photo-1562504208-03d85cc8c23e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
-                <img className={styles.map} src="https://ieng.hanyang.ac.kr/front/intro/location/file-load?id=21&fileId=8&mw=1280" alt="" />
-            </div>
-            <ReserveModal canReserve={canReserve} />
-
-        </section>
+function Rent({roomInfo}) {
+    const 경상대학 = roomInfo["경상대학"];
+    console.log(경상대학);
+    return(
+    <section className={styles.rent}>
+        <roomInterFace roomData={경상대학}/>
+        <h1 style={{fontSize:"42px"}}>경상대학-팀플실</h1>
+        <h5 style={{fontSize:"22px"}}>다목적-회의,스터디,자습(2인~6인)</h5>
+        
+    </section>
     );
 }
-
 export default Rent;
 
-
-function ReserveModal({ canReserve }) {
-    return (
-            <RentBox/>
+function roomInterFace({roomData}){
+    const room__department = roomData.department;
+    console.log(room__department);
+    return(
+        <>
+        <h1>{roomData}</h1>
+        room
+        </>
     );
 }
-
-
-
