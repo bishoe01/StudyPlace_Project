@@ -18,7 +18,7 @@ export default Rent;
 function RoomInterFace({ roomData, title }) {
     const Department = roomData.department;
     const Type = roomData.type;
-    const room = roomData.room;
+    const Room = roomData.room;
     const description = roomData.description;
     const img = roomData.img;
 
@@ -41,9 +41,32 @@ function RoomInterFace({ roomData, title }) {
                     </Carousel>
                 </section>
                 <section className={styles.right__rent}>
-                    <h6 className={styles.right__title}>세부사항 선택</h6>
+                    <div className={styles.right__texture}>
+                        <h3 className={styles.right__title}>세부사항 선택</h3>
+                        <icons className={styles.icons}>
+                            <i className={`fa-solid fa-arrow-up-from-bracket ${styles.icon_}`}></i>
+                            <i className={`fa-regular fa-bookmark ${styles.icon_}`}></i>
+                            <i className={`fa-solid fa-triangle-exclamation ${styles.icon_}`}></i>
+                        </icons>
+                    </div>
+                    <div>
+                    <RoomButton roomData={roomData}/>
+                    {/* ROOM별 버튼 */}
+                    </div>
                 </section>
             </div>
         </>
+    );
+}
+
+
+
+function RoomButton({roomData}) {
+    const Room = roomData.room;
+    return (
+        <div>
+            {Room.map((room) =>(console.log(room)))}
+
+        </div>
     );
 }

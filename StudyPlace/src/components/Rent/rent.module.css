@@ -28,14 +28,13 @@
     width: 70%;
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
 }
 
 .ImageSection {
     width: 800px;
     height: 550px;
     border-radius: 20px;
-    padding-top: 40px;
-    padding-right: 20px;
 }
 
 .carousel {
@@ -55,10 +54,30 @@
     width: 30%;
 }
 
-.right__rent right__title {
-    font-size: 16px;
+
+.right__texture{
+    border-bottom: 3px solid #5A8DFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.icons{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    font-size: 22px;
 }
 
+.icon_{
+    margin-left: 20px;
+}
+.right__rent .right__title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* ant-carousel */
 .ant-carousel .slick-dots li button{
     background-color: #f0f0f0;
     border-radius: 50%;
