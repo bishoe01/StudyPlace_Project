@@ -1,6 +1,67 @@
-.rent{
+.rent {
     width: 80%;
-    margin:auto;
-    background-color: powderblue;
+    margin: auto;
+    background-color: white;
     height: 1000px;
+}
+
+/* HeaderSection */
+.headerSection {
+    margin-top: 40px;
+}
+
+.description {
+    color: "lightgray";
+    font-size: "22px";
+}
+
+.tag {
+    margin-right: 20px;
+}
+
+.box {
+    display: flex;
+}
+
+/* left__introduce */
+.left__introduce {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ImageSection {
+    width: 800px;
+    height: 550px;
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-right: 20px;
+}
+
+.carousel {
+    border-radius: 20px;
+}
+
+.carousel img {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+/* right__rent */
+.right__rent {
+    width: 30%;
+}
+
+.right__rent right__title {
+    font-size: 16px;
+}
+
+.ant-carousel .slick-dots li button{
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
 }
