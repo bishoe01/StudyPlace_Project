@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import styles from './editor.module.css';
 
 function Editor() {
   const modules = {
@@ -54,14 +55,13 @@ function Editor() {
           },
           { background: [] },
         ],
-        ['image', 'video'],
-        ['clean'],
+        ['image'],
       ],
     },
   };
   return (
     <ReactQuill modules={modules}>
-      <div className='my-editing-area' />
+      <div className={styles.editingArea} />
     </ReactQuill>
   );
 }

@@ -1,12 +1,52 @@
-.postingWrap {
-  width: 100%;
-}
-
 .postingArea {
-  width: 1200px;
-  margin: 25px auto 130px;
+  width: 700px;
+  margin: 15px auto;
 }
 
-.postingForm {
+/* .postingForm {
   border: 1px solid black;
+  height: 500px;
+} */
+
+.titleInputWrap {
+  margin: 30px auto;
+}
+
+.titleInputWrap input {
+  width: 100%;
+  height: 35px;
+  padding: 3px 7px;
+  font-size: 14px;
+}
+
+.titleInputWrap input:focus {
+  outline: red solid 3px;
+}
+
+.titleInputWrap input::placeholder {
+  color: rgb(144, 144, 144);
+  font-size: 15px;
+}
+
+.postBtnWrap {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.postBtnWrap button {
+  border-radius: 5px;
+  font-size: 23px;
+  width: 70px;
+  height: 40px;
+  padding: 5px 3px;
+  font-size: 18px;
+}
+
+.postBtnWrap button:first-child {
+  margin-right: 10px;
+}
+
+.postBtnWrap button:nth-child(2) {
+  color: #fff;
+  background-color: #2462a2;
 }
