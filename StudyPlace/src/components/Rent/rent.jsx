@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
-import { Carousel } from 'antd';
+import { Carousel, Checkbox, Radio, Calendar } from 'antd';
+import { AlertOutlined } from '@ant-design/icons';
 import styles from './rent.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Tag } from 'antd';
@@ -21,7 +22,7 @@ function RoomInterFace({ roomData, title }) {
     const Room = roomData.room;
     const description = roomData.description;
     const img = roomData.img;
-
+    const detail = roomData.detail;
     return (
         <>
             <section className={styles.headerSection}>
@@ -46,27 +47,60 @@ function RoomInterFace({ roomData, title }) {
                         <icons className={styles.icons}>
                             <i className={`fa-solid fa-arrow-up-from-bracket ${styles.icon_}`}></i>
                             <i className={`fa-regular fa-bookmark ${styles.icon_}`}></i>
-                            <i className={`fa-solid fa-triangle-exclamation ${styles.icon_}`}></i>
+                            <AlertOutlined className={styles.icon_}/>
                         </icons>
                     </div>
-                    <div>
-                    <RoomButton roomData={roomData}/>
-                    {/* ROOM별 버튼 */}
-                    </div>
+                    <SelectRoom roomData={roomData} />
                 </section>
             </div>
         </>
     );
 }
+// SELECTROOM
 
 
-
-function RoomButton({roomData}) {
+function SelectRoom({ roomData }) {
+    const Department = roomData.department;
+    const Type = roomData.type;
     const Room = roomData.room;
+    const description = roomData.description;
+    const img = roomData.img;
+    const detail = roomData.detail;
     return (
-        <div>
-            {Room.map((room) =>(console.log(room)))}
+        <section className={styles.selectRoom}>
+            <notice className={styles.notice}>
+                <p className={styles.select__detail}>
+                    <h6>{detail}</h6>
+                </p>
+            </notice>
+            {Room.map((room) => (
+                <RoomButton roomData={roomData} roomNum={room} />
+            ))}
 
-        </div>
+        </section>
     );
+}
+
+function RoomButton({ roomData, roomNum }) {
+    const [calendar, setCalendar] = useState(false);
+    const Department = roomData.department;
+    const Type = roomData.type;
+    const Room = roomData.room;
+    const description = roomData.description;
+    const img = roomData.img;
+    const detail = roomData.detail;
+    const People = roomData.people;
+    return (
+        <section className={styles.btnSection}>
+            <div className={styles.roomBtn} onClick={() => setCalendar(!calendar)}>
+                <h5>{`${roomNum}번 팀플실`}</h5>
+                <span className={styles.roomBtn__people}>{(roomNum % 4 == 0 || roomNum % 4 == 1) ? `2 ~ ${People[1]}인` : `2 ~ ${People[0]}인`}</span>
+            </div>
+            {calendar && (
+                <div className={`site-calendar-demo-card ${styles.calendar}`}>
+                <Calendar fullscreen={false} onPanelChange={""} />
+                </div>
+            )}
+        </section>
+    )
 }
