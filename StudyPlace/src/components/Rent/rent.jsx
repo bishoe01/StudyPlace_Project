@@ -5,6 +5,7 @@ import { AlertOutlined } from '@ant-design/icons';
 import styles from './rent.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Tag } from 'antd';
+import { color } from '@chakra-ui/react';
 function Rent({ roomInfo }) {
     const 경상대학 = roomInfo["경상대학"];
     const 소프트웨어융합대학 = roomInfo["소프트웨어융합대학"];
@@ -58,7 +59,6 @@ function RoomInterFace({ roomData, title }) {
 }
 // SELECTROOM
 
-
 function SelectRoom({ roomData }) {
     const Department = roomData.department;
     const Type = roomData.type;
@@ -66,6 +66,7 @@ function SelectRoom({ roomData }) {
     const description = roomData.description;
     const img = roomData.img;
     const detail = roomData.detail;
+    const [openCalendar, setOpenCalendar] = useState([...Room]);
     return (
         <section className={styles.selectRoom}>
             <notice className={styles.notice}>
@@ -90,10 +91,19 @@ function RoomButton({ roomData, roomNum }) {
     const img = roomData.img;
     const detail = roomData.detail;
     const People = roomData.people;
+    const calenderOpen = () => {
+        setCalendar(!calendar);
+    }
     return (
         <section className={styles.btnSection}>
-            <div className={styles.roomBtn} onClick={() => setCalendar(!calendar)}>
-                <h5>{`${roomNum}번 팀플실`}</h5>
+            <div className={styles.roomBtn} onClick={calenderOpen} 
+            style={{
+                backgroundColor : calendar ? "#5A8DFF" : " ",
+            }}>
+                <h5 
+                style={{
+                    color : calendar ? "white" : " ",
+                }}>{`회의룸 ${roomNum}실 `}</h5>
                 <span className={styles.roomBtn__people}>{(roomNum % 4 == 0 || roomNum % 4 == 1) ? `2 ~ ${People[1]}인` : `2 ~ ${People[0]}인`}</span>
             </div>
             {calendar && (
