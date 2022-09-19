@@ -26,12 +26,6 @@ ul {
   margin: 10px auto;
 }
 
-.reservation {
-  flex-direction: column;
-  padding: 5px 10px;
-  margin-top: 10px;
-}
-
 .verticalLine {
   border-right: 1px solid var(--border-color);
   height: 185px;
@@ -43,7 +37,7 @@ ul {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   /* background-color: #d7e9f7; */
-  width: 670px;
+  width: 750px;
   box-shadow: 2px 2px 10px 0 rgba(83, 86, 122, 0.08);
 }
 
@@ -94,6 +88,8 @@ ul {
   vertical-align: middle;
 }
 
+/* 개인정보 */
+
 .info {
   display: flex;
   flex-direction: column;
@@ -108,7 +104,8 @@ ul {
 }
 
 .info li {
-  font-size: 14px;
+  font-size: 17px;
+  height: 45px;
 }
 
 .info li:nth-child(-n + 4) {
@@ -117,12 +114,22 @@ ul {
 
 .infoItem {
   display: flex;
+  line-height: 35px;
+}
+
+.infoItem::before {
+  width: 20px;
+  height: 20px;
+  margin: auto 0px;
+  padding-top: 5px;
+  background-color: white;
+  color: black;
 }
 
 .infoText {
-  line-height: 40px;
   flex-grow: 1;
   margin-left: 3px;
+  padding-top: 5px;
   color: var(--font-color);
 }
 
@@ -131,14 +138,13 @@ ul {
   width: 45px;
   height: 25px;
   border-radius: 5px;
-  margin: auto 0;
+  margin-top: 11px;
+  line-height: normal;
 }
 
-.infoItem::before {
-  width: 20px;
-  height: 20px;
-  margin: auto 0px;
-  padding-top: 4px;
-  background-color: white;
-  color: black;
+/* 예약 내역 */
+.reservation {
+  flex-direction: column;
+  padding: 5px 10px;
+  margin-top: 10px;
 }

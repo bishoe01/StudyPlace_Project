@@ -51,7 +51,9 @@ function Profile(props) {
             <li>
               <div className={`${styles.infoItem} ${`icon-lock`}`}>
                 <span className={styles.infoText}>비밀번호 변경</span>
-                <button className={`${styles.modifyBtn} ${styles.liBtn}`}>수정</button>
+                <button className={`${styles.modifyBtn} ${styles.liBtn}`}>
+                  <span>수정</span>
+                </button>
               </div>
             </li>
           </ul>
