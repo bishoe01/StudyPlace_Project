@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './notice.module.css';
-import Paging from './Paging/paging';
 import NoticeList from './NoticeList/noticeList';
+import SelectBox from './SelectBox/selectBox';
+import Paging from './Paging/paging';
 
 function Notice() {
   return (
@@ -28,6 +29,12 @@ function Notice() {
           <button className={styles.postBtn}>글쓰기</button>
         </section>
         <Paging />
+        <section className={styles.searchWrap}>
+          <SelectBox />
+          <input type='text' />
+          <button>검색</button>
+        </section>
+        <div></div>
       </div>
     </div>
   );

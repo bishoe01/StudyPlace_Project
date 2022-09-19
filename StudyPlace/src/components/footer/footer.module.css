@@ -1,78 +1,77 @@
+.footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+  background-color: #5a8dff;
+  height: 220px;
+  color: white;
+}
+.together {
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
 
-.footer{
-    position: relative;
-    display: flex;
-    width: 100%;
-    padding-top: 40px;
-    background-color:#5A8DFF;
-    height: 220px;
-    color:white;
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 200px;
+  width: 40%;
+  align-items: flex-start;
 }
-.together{
-    width: 150px;
-    position: absolute;
-    top: 30px;
-    left: 30px;
+.h2 {
+  font-size: 28px;
 }
-
-.leftContainer{
-    display: flex;
-    flex-direction: column;
-    padding-left: 200px;
-    width: 40%;
-    align-items: flex-start;
+.h2::first-letter {
 }
-.h2{
-    font-size: 28px;
+.email,
+.tel {
+  font-size: 20px;
+  padding: 5px 0px;
 }
-.h2::first-letter{
-}
-.email,.tel{
-    font-size: 20px;
-    padding: 5px 0px;
-}
-.copyright{
-    margin: 0px;
-    font-size: 20px;
-    color: lightgray;
+.copyright {
+  margin: 0px;
+  font-size: 20px;
+  color: lightgray;
 }
 /* right */
-.rightContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
 }
-ul{
-    display: flex;
-    list-style: none;
+.links {
+  display: flex;
+  list-style: none;
 }
-.navbtn{
-    color: white;
-    font-size: 22px;
-    padding: 0 80px;
+.navbtn {
+  color: white;
+  font-size: 22px;
+  padding: 0 80px;
 }
-.navbtn:hover{
-    text-decoration: none;
-    color: black;
+.navbtn:hover {
+  text-decoration: none;
+  color: black;
 }
 /* logo */
-.logos{
-    display: flex;
-    justify-content: space-between;
-    font-size: 22px;
-    padding-top: 40px;
+.logos {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  padding-top: 40px;
 }
-.logo{
-    width: 30px;
-    height: 30px;
-    padding: 0 80px;
-    transition: all 200ms ease-in;
-    cursor: pointer;
+.logo {
+  width: 30px;
+  height: 30px;
+  padding: 0 80px;
+  transition: all 200ms ease-in;
+  cursor: pointer;
 }
 
-
-.logo:hover{
-    transform: scale(1.3);
-    color: black;
+.logo:hover {
+  transform: scale(1.3);
+  color: black;
 }

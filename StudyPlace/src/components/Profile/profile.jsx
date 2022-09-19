@@ -34,7 +34,7 @@ function Profile(props) {
               </div>
             </li>
             <li>
-              <div className={`${styles.infoItem} ${`icon-building`}`}>
+              <div className={`${styles.infoItem} ${`icon-vcard`}`}>
                 <span className={styles.infoText}>2022018493</span>
               </div>
             </li>
@@ -44,7 +44,7 @@ function Profile(props) {
               </div>
             </li>
             <li>
-              <div className={`${styles.infoItem} ${`icon-building`}`}>
+              <div className={`${styles.infoItem} ${`icon-pencil`}`}>
                 <span className={styles.infoText}>소프트웨어학부 소프트웨어전공</span>
               </div>
             </li>

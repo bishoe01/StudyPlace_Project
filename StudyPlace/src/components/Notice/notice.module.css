@@ -48,3 +48,27 @@ table {
   background: var(--text-color);
   color: white;
 }
+
+.searchWrap {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.searchWrap input {
+  width: 370px;
+  height: 35px;
+  padding: 3px 5px;
+  margin-right: 5px;
+}
+
+.searchWrap button {
+  border-radius: 5px;
+  font-size: 23px;
+  width: 70px;
+  height: 35px;
+  padding: 0px 3px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #2462a2;
+}

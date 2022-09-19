@@ -7,6 +7,7 @@ import Rent from './components/Rent/rent';
 import Profile from './components/Profile/profile';
 import Notice from './components/Notice/notice';
 import Posting from './components/Posting/posting';
+import UserPost from './components/UserPost/userPost';
 import { Profiler, useState } from 'react';
 function App() {
   const [user, setuser] = useState([
@@ -27,6 +28,7 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/notice' element={<Notice />} />
         <Route path='/posting' element={<Posting />} />
+        <Route path='/userPost' element={<UserPost />} />
       </Routes>
       <Footer />
     </>
