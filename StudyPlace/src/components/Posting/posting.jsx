@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styles from './posting.module.css';
 import Editor from '../Editor/editor';
+import styles from './posting.module.css';
 
 function Posting() {
   return (

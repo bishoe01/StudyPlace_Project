@@ -1,0 +1,52 @@
+.wrap {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  /* padding: 8px; */
+  margin-right: 5px;
+  background-color: #fff;
+  align-self: center;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  border: 1px solid rgb(167, 167, 167);
+  cursor: pointer;
+}
+
+.wrap::before {
+  content: '⌵';
+  position: absolute;
+  top: 1px;
+  right: 8px;
+  color: #66aecf;
+  font-size: 20px;
+}
+
+.wrap label {
+  font-size: 14px;
+  margin-left: 4px;
+  margin-top: 6px;
+}
+
+.opList {
+  position: absolute;
+  list-style: none;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 99px;
+  padding: 0;
+  border-radius: 8px;
+  color: #333;
+  border: 1px solid rgb(167, 167, 167);
+}
+
+.opList li {
+  height: 33px;
+  font-size: 14px;
+  padding: 6px 8px;
+  color: #333;
+}
+
+.opList li:hover {
+  background-color: #9e9d9d;
+}
