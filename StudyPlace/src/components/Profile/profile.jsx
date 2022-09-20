@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './profile.module.css';
 
-import EmailModal from './modal/emailModal';
-import DeptModal from './modal/deptModal';
+// import EmailModal from './modal/emailModal';
+// import DeptModal from './modal/deptModal';
+import History from './History/history';
 import '../../common/fontello/css/fontello.css';
 
 function Profile(props) {
@@ -55,16 +56,12 @@ function Profile(props) {
 
       <section className={`${styles.box} ${styles.reservation}`}>
         <h3>예약 내역</h3>
-        <div className={styles.resvWarp}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat impedit earum architecto. Voluptatem, numquam in excepturi consequatur fuga obcaecati aspernatur voluptas amet ex hic sint
-            qui! Facilis ratione deleniti pariatur. Eius st rerum odit ratione amet pariatur quae id, hic, placeat non voluptas quibusdam adipisci? Quibusdam, ad nulla? Minima aliquid, eos consectetur
-            corrupti maiores rem laboum exepturi necessitatibus natus error?
-          </p>
+        <div className={styles.historyWrap}>
+          <History />
         </div>
       </section>
-      {emailModal ? <EmailModal emailModal={emailModal} setEmailModal={setEmailModal} /> : null}
-      {deptModal ? <DeptModal deptModal={deptModal} setDeptModal={setDeptModal} /> : null}
+      {/* {emailModal ? <EmailModal emailModal={emailModal} setEmailModal={setEmailModal} /> : null} */}
+      {/* {deptModal ? <DeptModal deptModal={deptModal} setDeptModal={setDeptModal} /> : null} */}
     </div>
   );
 }
