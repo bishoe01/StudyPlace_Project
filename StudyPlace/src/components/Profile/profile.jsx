@@ -8,6 +8,10 @@ import '../../common/fontello/css/fontello.css';
 function Profile(props) {
   let [emailModal, setEmailModal] = useState(false);
   let [deptModal, setDeptModal] = useState(false);
+  let [icons] = useState(['mail', 'vcard', 'building', 'pencil']);
+
+  let [userName, setName] = useState('하냥이');
+  let [userInfo, setInfo] = useState(['hanyang@hanyang.ac.kr', 2022932803, '소프트웨어융합대학', '소프트웨어학부 소프트웨어전공']);
 
   return (
     <div className={styles.container}>
@@ -21,33 +25,22 @@ function Profile(props) {
             <button className={styles.imgBtn}>이미지 제거</button>
           </div> */}
           <div className={styles.userNameBox}>
-            <span className={styles.name}>하냥이</span>
+            <span className={styles.name}>{userName}</span>
             {/* <button className={styles.modifyBtn}>수정</button> */}
           </div>
         </div>
         <div className={styles.verticalLine}></div>
         <div className={styles.boxInner}>
           <ul className={styles.info}>
-            <li>
-              <div className={`${styles.infoItem} ${`icon-mail`}`}>
-                <span className={styles.infoText}>hanyang@hanyang.ac.kr</span>
-              </div>
-            </li>
-            <li>
-              <div className={`${styles.infoItem} ${`icon-vcard`}`}>
-                <span className={styles.infoText}>2022018493</span>
-              </div>
-            </li>
-            <li>
-              <div className={`${styles.infoItem} ${`icon-building`}`}>
-                <span className={styles.infoText}>소프트웨어융합대학</span>
-              </div>
-            </li>
-            <li>
-              <div className={`${styles.infoItem} ${`icon-pencil`}`}>
-                <span className={styles.infoText}>소프트웨어학부 소프트웨어전공</span>
-              </div>
-            </li>
+            {icons.map(function (icon, i) {
+              return (
+                <li>
+                  <div className={`${styles.infoItem} icon-${icon}`}>
+                    <span className={styles.infoText}>{userInfo[i]}</span>
+                  </div>
+                </li>
+              );
+            })}
             <li>
               <div className={`${styles.infoItem} ${`icon-lock`}`}>
                 <span className={styles.infoText}>비밀번호 변경</span>

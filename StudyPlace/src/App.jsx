@@ -9,6 +9,8 @@ import Notice from './components/Notice/notice';
 import Posting from './components/Posting/posting';
 import UserPost from './components/UserPost/userPost';
 import { Profiler, useState } from 'react';
+import 'antd/dist/antd.css';
+
 function App() {
   const [user, setuser] = useState([
     {

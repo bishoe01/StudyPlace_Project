@@ -16,11 +16,11 @@
   width: 100%;
   height: 35px;
   padding: 3px 7px;
-  font-size: 14px;
+  border: 1px solid rgb(167, 167, 167);
 }
 
 .titleInputWrap input:focus {
-  outline: red solid 3px;
+  outline: 1px solid rgb(122, 122, 122);
 }
 
 .titleInputWrap input::placeholder {
