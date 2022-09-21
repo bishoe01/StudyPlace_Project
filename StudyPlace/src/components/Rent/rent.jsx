@@ -5,19 +5,21 @@ import { AlertOutlined } from '@ant-design/icons';
 import styles from './rent.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Tag } from 'antd';
-import { color } from '@chakra-ui/react';
-function Rent({ roomInfo }) {
+import { DateBtn } from '../styled';
+function Rent({ roomInfo}) {
+    const caution = roomInfo["caution"];
     const 경상대학 = roomInfo["경상대학"];
     const 소프트웨어융합대학 = roomInfo["소프트웨어융합대학"];
+    
     return (
         <section className={styles.rent}>
-            <RoomInterFace title={"경상대학-팀플실"} roomData={경상대학} />
+            <RoomInterFace title={"경상대학-팀플실"} roomData={경상대학} caution={caution} />
         </section>
     );
 }
 export default Rent;
 
-function RoomInterFace({ roomData, title }) {
+function RoomInterFace({ roomData, title ,caution}) {
     const Department = roomData.department;
     const Type = roomData.type;
     const Room = roomData.room;
@@ -41,6 +43,21 @@ function RoomInterFace({ roomData, title }) {
                             <div className={styles.carousel}><img src={img} />
                             </div>))}
                     </Carousel>
+                    <section className={styles.description__nav}>
+                        <ul className={styles.nav__scroll}>
+                            <li>공간소개</li>
+                            <li>시설안내</li>
+                            <li>유의사항</li>
+                            <li>Q&A</li>
+                        </ul>
+                        <section className={styles.caution__section}>
+                        <h4 id='#주의사항' className={styles.caution__h4}>{caution.주의사항[0]}</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore itaque odio repellendus, delectus laboriosam quis voluptate laborum enim provident?</p>
+                        
+                        <h4 id='#' className={styles.caution__h4}>{caution.주의사항[1]}</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium inventore itaque odio repellendus, delectus laboriosam quis voluptate laborum enim provident?</p>
+                        </section>
+                    </section>
                 </section>
                 <section className={styles.right__rent}>
                     <div className={styles.right__texture}>
@@ -83,6 +100,7 @@ function SelectRoom({ roomData }) {
 }
 
 function RoomButton({ roomData, roomNum }) {
+
     const [calendar, setCalendar] = useState(false);
     const Department = roomData.department;
     const Type = roomData.type;
@@ -91,6 +109,8 @@ function RoomButton({ roomData, roomNum }) {
     const img = roomData.img;
     const detail = roomData.detail;
     const People = roomData.people;
+    const today = new Date().getMonth();
+    const dateList = Array.from({ length: 31 }, (v, i) => i + 1);
     const calenderOpen = () => {
         setCalendar(!calendar);
     }
@@ -108,9 +128,11 @@ function RoomButton({ roomData, roomNum }) {
             </div>
             {calendar && (
                 <div className={`site-calendar-demo-card ${styles.calendar}`}>
-                <Calendar fullscreen={false} onPanelChange={""} />
+                    {dateList.map((date) => <h4>{date}</h4>)}
                 </div>
             )}
         </section>
     )
 }
+
+
