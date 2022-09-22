@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { Divider, Tag } from 'antd';
 import { DateBtn } from '../styled';
 function Rent({ roomInfo}) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const caution = roomInfo["caution"];
     const 경상대학 = roomInfo["경상대학"];
     const 소프트웨어융합대학 = roomInfo["소프트웨어융합대학"];
