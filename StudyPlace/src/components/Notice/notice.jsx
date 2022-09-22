@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './notice.module.css';
+import styles from './notice.module.scss';
 import NoticeList from './NoticeList/noticeList';
 import SelectBox from './SelectBox/selectBox';
 import Paging from './Paging/paging';
@@ -11,13 +11,20 @@ function Notice() {
         <section className={styles.headerWrap}>
           <h3 className={styles.noticeHeader}>공지사항</h3>
         </section>
-        <article className={styles.tableWrap}>
-          <table className={styles.noticeTable}>
-            <NoticeList />
-          </table>
-        </article>
+        <table className={styles.noticeTable}>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+              <th>조회수</th>
+            </tr>
+          </thead>
+          <NoticeList />
+        </table>
         <section className={styles.bottomMenu}>
-          <button className={styles.postBtn}>글쓰기</button>
+          <button>글쓰기</button>
         </section>
         <Paging />
         <section className={styles.searchWrap}>

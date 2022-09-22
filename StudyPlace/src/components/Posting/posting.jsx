@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Editor from '../Editor/editor';
-import styles from './posting.module.css';
+import styles from './posting.module.scss';
 
 function Posting() {
   return (

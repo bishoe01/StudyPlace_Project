@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './profile.module.css';
+import styles from './profile.module.scss';
 
 // import EmailModal from './modal/emailModal';
 // import DeptModal from './modal/deptModal';
@@ -7,6 +7,7 @@ import History from './History/history';
 import '../../common/fontello/css/fontello.css';
 
 function Profile(props) {
+  console.log(styles.container);
   let [emailModal, setEmailModal] = useState(false);
   let [deptModal, setDeptModal] = useState(false);
   let icons = ['mail', 'vcard', 'building', 'pencil'];
@@ -19,10 +20,10 @@ function Profile(props) {
       <section className={`${styles.box} ${styles.profile}`}>
         <div className={styles.boxInner}>
           <div className={styles.imgBox}>
-            <img className={styles.profileImg} src='/imgs/HanyangE/defaultImg.png' alt='' />
+            <img src='/imgs/HanyangE/defaultImg.png' alt='' />
           </div>
           <div className={styles.userNameBox}>
-            <span className={styles.name}>{userName}</span>
+            <span>{userName}</span>
             {/* <button className={styles.modifyBtn}>수정</button> */}
           </div>
         </div>
@@ -31,9 +32,9 @@ function Profile(props) {
           <ul className={styles.info}>
             {icons.map(function (icon, i) {
               return (
-                <li>
+                <li key={i}>
                   <div className={`${styles.infoItem} icon-${icon}`}>
-                    <span className={styles.infoText}>{userInfo[i]}</span>
+                    <span>{userInfo[i]}</span>
                   </div>
                 </li>
               );
