@@ -9,7 +9,7 @@ import '../../common/fontello/css/fontello.css';
 function Profile(props) {
   let [emailModal, setEmailModal] = useState(false);
   let [deptModal, setDeptModal] = useState(false);
-  let [icons] = useState(['mail', 'vcard', 'building', 'pencil']);
+  let icons = ['mail', 'vcard', 'building', 'pencil'];
 
   let [userName, setName] = useState('하냥이');
   let [userInfo, setInfo] = useState(['hanyang@hanyang.ac.kr', 2022932803, '소프트웨어융합대학', '소프트웨어학부 소프트웨어전공']);
@@ -21,10 +21,6 @@ function Profile(props) {
           <div className={styles.imgBox}>
             <img className={styles.profileImg} src='/imgs/HanyangE/defaultImg.png' alt='' />
           </div>
-          {/* <div className={styles.imgBtnBox}>
-            <button className={styles.imgBtn}>이미지 업로드</button>
-            <button className={styles.imgBtn}>이미지 제거</button>
-          </div> */}
           <div className={styles.userNameBox}>
             <span className={styles.name}>{userName}</span>
             {/* <button className={styles.modifyBtn}>수정</button> */}

@@ -3,44 +3,46 @@ import styles from './noticeList.module.css';
 
 function NoticeList() {
   return (
-    <tbody>
-      <tr className={styles.tableRow}>
-        <td className={styles.number}>1</td>
-        <td className={styles.title}>
-          <a href='#'>첫번째 글입니다.</a>
-        </td>
-        <td className={styles.department}>소융대</td>
-        <td className={styles.date}>2022.09.12</td>
-        <td className={styles.views}>1</td>
-      </tr>
-      <tr className={styles.tableRow}>
-        <td className={styles.number}>2</td>
-        <td className={styles.title}>
-          <a href='#'>두번째 글입니다.</a>
-        </td>
-        <td className={styles.department}>소융대</td>
-        <td className={styles.date}>2022.09.12</td>
-        <td className={styles.views}>1</td>
-      </tr>
-      <tr className={styles.tableRow}>
-        <td className={styles.number}>3</td>
-        <td className={styles.title}>
-          <a href='#'>세번째 글입니다.</a>
-        </td>
-        <td className={styles.department}>소융대</td>
-        <td className={styles.date}>2022.09.12</td>
-        <td className={styles.views}>1</td>
-      </tr>
-      <tr className={styles.tableRow}>
-        <td className={styles.number}>4</td>
-        <td className={styles.title}>
-          <a href='#'>네번째 글입니다.</a>
-        </td>
-        <td className={styles.department}>소융대</td>
-        <td className={styles.date}>2022.09.12</td>
-        <td className={styles.views}>1</td>
-      </tr>
-    </tbody>
+    <>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성일</th>
+          <th>조회수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className={styles.tableRow}>
+          <td>3</td>
+          <td className={styles.title}>
+            <a href='#'>공지글입니다.</a>
+          </td>
+          <td>소융대</td>
+          <td>2022.09.12</td>
+          <td>1</td>
+        </tr>
+        <tr className={styles.tableRow}>
+          <td>2</td>
+          <td className={styles.title}>
+            <a href='#'>공지글입니다.</a>
+          </td>
+          <td>소융대</td>
+          <td>2022.09.12</td>
+          <td>1</td>
+        </tr>{' '}
+        <tr className={styles.tableRow}>
+          <td>1</td>
+          <td className={styles.title}>
+            <a href='#'>공지글입니다.</a>
+          </td>
+          <td>소융대</td>
+          <td>2022.09.12</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </>
   );
 }
 

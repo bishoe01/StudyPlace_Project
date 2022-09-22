@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Editor from '../Editor/editor';
 import styles from './posting.module.css';
 
@@ -14,7 +15,10 @@ function Posting() {
             <Editor />
           </div>
           <div className={styles.postBtnWrap}>
-            <button className={styles.cancel}>취소</button>
+            <Link to='/Notice'>
+              <button className={styles.cancel}>취소</button>
+            </Link>
+
             <button className={styles.posting}>등록</button>
           </div>
         </section>

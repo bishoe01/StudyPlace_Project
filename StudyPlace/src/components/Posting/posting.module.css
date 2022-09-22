@@ -3,13 +3,8 @@
   margin: 15px auto;
 }
 
-/* .postingForm {
-  border: 1px solid black;
-  height: 500px;
-} */
-
 .titleInputWrap {
-  margin: 30px auto;
+  margin: 5px auto;
 }
 
 .titleInputWrap input {
@@ -49,4 +44,9 @@
 .postBtnWrap button:nth-child(2) {
   color: #fff;
   background-color: #2462a2;
+}
+
+.postBtnWrap a,
+.postBtnWrap a:hover {
+  color: #333;
 }

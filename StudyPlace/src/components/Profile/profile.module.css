@@ -67,14 +67,6 @@ ul {
   object-fit: cover;
 }
 
-.imgBtn {
-  margin: 10px 5px 10px 5px;
-  font-size: 13px;
-  width: 90px;
-  height: 24px;
-  border-radius: 3px;
-}
-
 .userNameBox {
   width: 100%;
   text-align: center;

@@ -9,6 +9,7 @@
 
 .tableRow a {
   font-size: 16px;
+  color: #333;
 }
 
 .tableRow a:hover {
@@ -19,11 +20,5 @@
 .tableRow td {
   padding: 7px 5px;
   font-size: 14px;
-}
-
-.number,
-.department,
-.date,
-.views {
   text-align: center;
 }
