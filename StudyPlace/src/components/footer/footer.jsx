@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from './footer.module.css';
+import styles from './footer.module.scss';
 function Footer(props) {
   const navigate = useNavigate();
   return (
     <footer className={styles.footer}>
       <section className={styles.leftContainer}>
-        <img className={styles.together} src='./imgs/HY-Together/4.svg' alt='' />
+        <img src='./imgs/HY-Together/4.svg' alt='' />
         <div>
           <h6 className={styles.tel}>TEL +82-10-3733-0690</h6>
           <h6 className={styles.email}>Email : contact@hanyang.ac.kr</h6>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './notice.module.scss';
 import NoticeList from './NoticeList/noticeList';
 import SelectBox from './SelectBox/selectBox';
-import Paging from './Paging/paging';
+import PaginationCustom from './Pagination/paginationCustom';
 
 function Notice() {
   return (
@@ -26,7 +26,9 @@ function Notice() {
         <section className={styles.bottomMenu}>
           <button>글쓰기</button>
         </section>
-        <Paging />
+        <section className={styles.pagination}>
+          <PaginationCustom />
+        </section>
         <section className={styles.searchWrap}>
           <SelectBox />
           <input type='text' />

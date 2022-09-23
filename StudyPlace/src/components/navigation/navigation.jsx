@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import React, { useState } from 'react';
-import styles from './navigation.module.css';
+import styles from './navigation.module.scss';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 function Navigation() {
   const navigate = useNavigate();
