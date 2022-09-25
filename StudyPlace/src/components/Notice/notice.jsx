@@ -25,7 +25,7 @@ const InputBox = styled(Input)`
   width: 370px;
   height: 35px;
   padding: 3px 5px;
-  margin-right: 5px;
+  margin: 0 5px;
   border: 1px solid rgb(167, 167, 167);
 `;
 
