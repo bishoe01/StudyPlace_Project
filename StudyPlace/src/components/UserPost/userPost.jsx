@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import styles from './userPost.module.scss';
 import styled from 'styled-components';
+import { Button, PageHeader } from 'antd';
+import CustomBtn from './../styledComponent/styledComponent';
 
-import { Button, Descriptions, PageHeader, Row, Statistic, Tag } from 'antd';
 const CustomHeader = styled(PageHeader)`
   border-top: 3px solid #2462a2;
   border-bottom: 1px solid #e3e9ed;
   font-size: 20px;
+`;
+const PostBtn = styled(CustomBtn)`
+  width: 90px;
+  height: 35px;
 `;
 
 function UserPost() {
@@ -26,9 +31,9 @@ function UserPost() {
               </p>
             </div>
           </div>
-        </div>
-        <div className={styles.btnWrap}>
-          <button>목록</button>
+          <div className={styles.btnWrap}>
+            <PostBtn type='primary'>글쓰기</PostBtn>
+          </div>
         </div>
       </section>
     </>

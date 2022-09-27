@@ -2,23 +2,24 @@ import React, { useEffect, useState } from 'react';
 import styles from './notice.module.scss';
 import styled from 'styled-components';
 import NoticeList from './NoticeList/noticeList';
-import SelectBox from './SelectBox/selectBox';
+import DropDownMenu from './DropDownMenu/dropDownMenu';
 import PaginationCustom from './Pagination/paginationCustom';
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
-const SearchBtn = styled(Button)`
-  width: 90px;
-  height: 35px;
+const CustomBtn = styled(Button)`
   font-size: 16px;
   background-color: #2462a2;
 `;
 
-const PostBtn = styled(Button)`
+const SearchBtn = styled(CustomBtn)`
+  width: 90px;
+  height: 35px;
+`;
+
+const PostBtn = styled(CustomBtn)`
   width: 100px;
   height: 35px;
-  font-size: 16px;
-  background-color: black;
 `;
 
 const InputBox = styled(Input)`
@@ -26,7 +27,7 @@ const InputBox = styled(Input)`
   height: 35px;
   padding: 3px 5px;
   margin: 0 5px;
-  border: 1px solid rgb(167, 167, 167);
+  border: 1px solid rgb(227, 227, 227);
 `;
 
 function Notice() {
@@ -50,13 +51,13 @@ function Notice() {
           <NoticeList />
         </table>
         <section className={styles.bottomMenu}>
-          <PostBtn>글쓰기</PostBtn>
+          <PostBtn type='primary'>글쓰기</PostBtn>
         </section>
         <section className={styles.pagination}>
           <PaginationCustom />
         </section>
         <section className={styles.searchWrap}>
-          <SelectBox />
+          <DropDownMenu />
           <InputBox placeholder='검색어 입력' />
           <SearchBtn type='primary' icon={<SearchOutlined />}>
             검색

@@ -7,7 +7,7 @@ function History() {
       title: '날짜',
       dataIndex: 'date',
       sorter: {
-        compare: (a, b) => new Date(a) - new Date(b),
+        compare: (a, b) => new Date(a.date) - new Date(b.date),
         multiple: 3,
       },
     },
@@ -28,7 +28,7 @@ function History() {
     {
       key: '1',
       date: '2022-05-20',
-      time: '15:00~16:30',
+      time: '11:00~14:30',
       place: '소프트웨어융합대학 팀플실A',
       peoples: '4~6',
     },

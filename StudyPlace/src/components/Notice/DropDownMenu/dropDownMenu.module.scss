@@ -1,0 +1,78 @@
+@mixin animation($name, $duration, $method) {
+  animation: $name $duration $method;
+}
+
+@mixin keyframe($animation_name) {
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+
+.dropDownMenu {
+  position: relative;
+  width: 80px;
+  label {
+    padding: 5px;
+    margin: 0;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      outline: 1px solid #54b2ff;
+      transition: all 0.3s;
+    }
+  }
+
+  &:hover {
+    .dropDown {
+      display: block;
+      @include keyframe(test) {
+        0% {
+          transform: translateY(-5%);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+      @include animation(test, 0.3s, ease-in);
+      li {
+        @include keyframe(test) {
+          0% {
+            opacity: 0;
+            transform: translateY(-10%);
+          }
+
+          50% {
+            opacity: 0.5;
+          }
+
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @include animation(test, 0.3s, ease-in);
+      }
+    }
+  }
+}
+
+.dropDown {
+  display: none;
+  position: absolute;
+  min-width: 80px;
+  padding: 4px 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  li {
+    padding: 2px 4px;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(217, 217, 217);
+    }
+  }
+}

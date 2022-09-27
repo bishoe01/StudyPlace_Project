@@ -40,13 +40,6 @@
 .bottomMenu {
   text-align: right;
   padding-top: 20px;
-
-  button {
-    padding: 3px 12px;
-    font-size: 17px;
-    background: black;
-    color: white;
-  }
 }
 
 .pagination {
@@ -55,6 +48,7 @@
 
 .searchWrap {
   display: flex;
+  height: 150px;
   padding-top: 30px;
   justify-content: center;
 }

@@ -1,0 +1,77 @@
+.dropDownMenu {
+  width: 70px;
+  label {
+    padding: 5px;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@mixin animation($name, $duration, $method) {
+  animation: $name $duration $method;
+}
+
+@mixin keyframe($animation_name) {
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+
+.fadeIn {
+  overflow: hidden;
+}
+
+.fadeIn ul {
+  @include keyframe(fadeInAnimation) {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @include animation(fadeInAnimation, 0.1s, ease-in);
+}
+
+.fadeOut {
+  overflow: hidden;
+}
+
+.fadeOut ul {
+  @include keyframe(fadeOutAnimation) {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  @include animation(fadeOutAnimation, 0.1s, ease-out);
+  // animation: fadeOutAnimation 0.4s ease;
+  //   animation-fill-mode: forwards;
+}
+
+.dropDownComp > ul {
+  position: relative;
+  top: 5px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-left: 0;
+  list-style: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
