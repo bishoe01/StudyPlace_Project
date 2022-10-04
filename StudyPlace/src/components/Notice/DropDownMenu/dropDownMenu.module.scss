@@ -19,56 +19,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    user-select: none;
     &:hover {
       cursor: pointer;
       outline: 1px solid #54b2ff;
       transition: all 0.3s;
     }
   }
-
-  &:hover {
-    .dropDown {
-      display: block;
-      @include keyframe(test) {
-        0% {
-          transform: translateY(-5%);
-        }
-
-        100% {
-          transform: translateY(0);
-        }
-      }
-      @include animation(test, 0.3s, ease-in);
-      li {
-        @include keyframe(test) {
-          0% {
-            opacity: 0;
-            transform: translateY(-10%);
-          }
-
-          50% {
-            opacity: 0.5;
-          }
-
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @include animation(test, 0.3s, ease-in);
-      }
-    }
-  }
 }
 
 .dropDown {
   display: none;
+  margin: 0;
   position: absolute;
   min-width: 80px;
   padding: 4px 3px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  user-select: none;
   li {
+    user-select: none;
     padding: 2px 4px;
     &:hover {
       cursor: pointer;
@@ -76,3 +45,79 @@
     }
   }
 }
+
+.arrow {
+  transform: rotateX(180deg);
+  transition: transform 250ms ease-out;
+}
+
+.fadeIn {
+  display: block;
+
+  @include keyframe(test) {
+    0% {
+      // transform: translateY(-5%);
+      opacity: 0.3;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      // transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @include animation(test, 0.1s, linear);
+  li {
+    @include keyframe(fadeInAnimation) {
+      0% {
+        opacity: 0.3;
+        // transform: translateY(-10%);
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+        // transform: translateY(0);
+      }
+    }
+    @include animation(fadeInAnimation, 0.1s, linear);
+  }
+}
+
+// .fadeOut {
+//   @include keyframe(test) {
+//     0% {
+//       transform: translateY(0);
+//     }
+
+//     100% {
+//       transform: translateY(-5%);
+//       display: none;
+//     }
+//   }
+//   @include animation(test, 0.3s, ease-in);
+//   li {
+//     @include keyframe(fadeOutAnimation) {
+//       0% {
+//         opacity: 1;
+//         transform: translateY(0);
+//       }
+
+//       50% {
+//         opacity: 0.5;
+//       }
+
+//       100% {
+//         opacity: 0;
+//         transform: translateY(-10%);
+//       }
+//     }
+//     @include animation(fadeOutAnimation, 0.3s, ease-in);
+//   }
+// }

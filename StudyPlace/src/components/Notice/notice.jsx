@@ -6,6 +6,7 @@ import DropDownMenu from './DropDownMenu/dropDownMenu';
 import PaginationCustom from './Pagination/paginationCustom';
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
+import { noticeInfo } from './listsData.js';
 
 const CustomBtn = styled(Button)`
   font-size: 16px;
@@ -32,6 +33,18 @@ const InputBox = styled(Input)`
 
 function Notice() {
   const [size, setSize] = useState('large');
+  const [lists, setLists] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 2;
+  const [totalPosts, setTotalPosts] = useState(noticeInfo.length);
+  console.log(totalPosts);
+  const indexOfLast = currentPage * postsPerPage;
+  const indexOfFirst = indexOfLast - postsPerPage;
+  const currentPosts = (posts) => {
+    let currentPosts = 0;
+    currentPosts = posts.slice(indexOfFirst, indexOfLast);
+    return currentPosts;
+  };
   return (
     <div className={styles.contentWrap}>
       <div className={styles.contentArea}>
@@ -48,13 +61,13 @@ function Notice() {
               <th>조회수</th>
             </tr>
           </thead>
-          <NoticeList />
+          <NoticeList lists={currentPosts(noticeInfo)} />
         </table>
         <section className={styles.bottomMenu}>
           <PostBtn type='primary'>글쓰기</PostBtn>
         </section>
         <section className={styles.pagination}>
-          <PaginationCustom />
+          <PaginationCustom postPerPage={postsPerPage} setCurrentPage={setCurrentPage} totalPosts={totalPosts} />
         </section>
         <section className={styles.searchWrap}>
           <DropDownMenu />

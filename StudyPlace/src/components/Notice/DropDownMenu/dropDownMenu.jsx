@@ -7,14 +7,18 @@ import { AiOutlineDown } from 'react-icons/ai';
 
 function DropDownMenu() {
   const [visibility, setVisibility] = useState(false);
+  console.log(visibility);
   return (
     <>
       <div className={styles.dropDownMenu}>
-        <label>
+        <label
+          onClick={() => {
+            setVisibility(!visibility);
+          }}>
           <span>제목</span>
           <AiOutlineDown className={styles.arrow} />
         </label>
-        <ul className={styles.dropDown}>
+        <ul className={`${styles.dropDown} ${visibility ? styles.fadeIn : styles.fadeOut}`}>
           <li>제목</li>
           <li>내용</li>
           <li>제목+내용</li>
