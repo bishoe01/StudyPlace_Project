@@ -6,6 +6,7 @@ import styles from './rent.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Tag } from 'antd';
 import { DateBtn } from '../styled';
+import { Fade, Flip } from 'react-reveal';
 function Rent({ roomInfo}) {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -15,9 +16,11 @@ function Rent({ roomInfo}) {
     const 소프트웨어융합대학 = roomInfo["소프트웨어융합대학"];
     
     return (
+        <Fade>
         <section className={styles.rent}>
             <RoomInterFace title={"경상대학-팀플실"} roomData={경상대학} caution={caution} />
         </section>
+        </Fade>
     );
 }
 export default Rent;

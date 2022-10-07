@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Block from '../block/block';
 import styles from './department.module.css';
+import '../../App.scss';
 function Department(props) {
     return (
         <div>

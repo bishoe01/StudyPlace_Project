@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Department from './components/department/department';
 import Footer from './components/footer/footer';
 import Navigation from './components/navigation/navigation';
