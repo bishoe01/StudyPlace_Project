@@ -11,7 +11,16 @@ import Category from './components/category';
 import { Zoom } from 'react-reveal';
 
 function App() {
-
+  const BuildingList = [
+    "공학대학",
+    "소프트웨어융합대학",
+    "과학기술대학",
+    "국제문화대학",
+    "언론정보대학",
+    "경상대학",
+    "디자인대학",
+    "예체능대학",
+    "약학대학"]
   const [roomInfo, setRoomInfo] = useState(
     {
       "caution": {
@@ -46,10 +55,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Department />} />
         <Route path="engineer" element={<Rent roomInfo={roomInfo} />} />
-        <Route path="software" element={
-          <Zoom cascade>
-            <Category />
-          </Zoom>} />
+        <Route path="software" element={<Category BuildingList={BuildingList}/>} />
       </Routes>
       <Footer />
 
