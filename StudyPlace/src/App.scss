@@ -1,5 +1,86 @@
+$mainColor: #5A8DFF;
+$secondaryColor: #FF5A5A;
+$tertiaryColor: #5AFF5A;
+$quaternaryColor: #FF5AFF;
+$quinaryColor: #5A5AFF;
+$senaryColor: #FFA55A;
+$borderColor : #5C5C5C;
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+
+// category
+.category{
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .h1{
+    font-family: "Noto";
+    font-size: 26px;
+    padding: 20px;
+  }
+  .category__check{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    border-top: 1.2px solid $borderColor;
+    border-bottom: 1.2px solid $borderColor;
+  .check__title{
+    padding:  20px 40px;
+    background-color: #FAFAFA;
+    
+  }    
+    .check__list{
+    padding-left: 50px;
+    }
+
+    .list__radio{
+      .radio{
+        padding: 0 40px;
+      }
+    }
+  }
+  .selection{
+    display: flex;
+    width: 80%;
+    margin-top: 30px;
+    padding: 20px 0;
+    height: 600px;
+    justify-content: space-between;
+    .people{
+      margin-left: 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 20px;
+      width: 30%;
+      button{
+        background-color: transparent;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 45%;
+        height: 150px;
+        padding: 5%;
+        margin: 8px 8px;
+        cursor: pointer;
+        &:hover{
+          background-color: $mainColor;
+        }
+      }
+    }
+    .number{
+
+    }.time{
+
+    }
+  }
 }
