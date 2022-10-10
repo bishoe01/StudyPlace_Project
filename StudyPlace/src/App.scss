@@ -64,27 +64,31 @@ $borderColor : #5C5C5C;
   .selection{
     display: flex;
     width: 80%;
+    height: 1000px;
     margin-top: 30px;
     padding: 20px 0;
     // height: 600px;
-    justify-content: space-between;
-    .people{
-      margin-left: 20px;
-      border: 1px solid black;
+    justify-content: center;
+    .building{
+      border: 0.5px solid $mainColor;
       border-radius: 5px;
       padding: 20px;
-      width: 30%;
-      height: 300px;
-      overflow: scroll;
+      width: 60%;
+      height: 400px;
+      overflow-y: scroll;
+      
+      ::-webkit-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
       button{
         background-color: transparent;
-        border: 1px solid $borderColor;
+        border: 0.5px solid $mainColor;
         border-radius: 5px;
         font-size: 16px;
-        width: 45%;
+        width: 30%;
         height: 150px;
-        padding: 5%;
-        margin: 8px 8px;
+        margin: 8px;
         cursor: pointer;
         &:hover{
           background-color: $mainColor;
@@ -92,9 +96,47 @@ $borderColor : #5C5C5C;
       }
     }
     .number{
-
-    }.time{
-
+      border: 0.5px solid $mainColor;
+      border-radius: 5px;
+      padding: 20px;
+      width: 30%;
+      height: 400px;
+      margin-left: 5px;
+      overflow-y: scroll;
+      button{
+        background-color: transparent;
+        border: 0.5px solid $mainColor;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 90%;
+        height: 30px;
+        margin: 8px;
+        cursor: pointer;
+        &:hover{
+          background-color: $mainColor;
+        }
+      }
+    }.people{
+      border: 0.5px solid $mainColor;
+      border-radius: 5px;
+      padding: 20px;
+      width: 30%;
+      height: 400px;
+      margin-left: 5px;
+      overflow-y: scroll;
+      button{
+        background-color: transparent;
+        border: 0.5px solid $mainColor;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 90%;
+        height: 30px;
+        margin: 8px;
+        cursor: pointer;
+        &:hover{
+          background-color: $mainColor;
+        }
+      }
     }
   }
 }
