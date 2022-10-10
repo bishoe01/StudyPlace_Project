@@ -23,26 +23,4 @@
 .postBtnWrap {
   text-align: right;
   margin-top: 15px;
-
-  button {
-    border-radius: 5px;
-    font-size: 23px;
-    width: 70px;
-    height: 40px;
-    padding: 5px 3px;
-    font-size: 18px;
-    &:first-child {
-      margin-right: 10px;
-    }
-
-    &:nth-child(2) {
-      color: #fff;
-      background-color: #2462a2;
-    }
-  }
-
-  a,
-  a:hover {
-    color: #333;
-  }
 }

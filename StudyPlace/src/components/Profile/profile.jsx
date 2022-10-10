@@ -7,9 +7,8 @@ import History from './History/history';
 import '../../common/fontello/css/fontello.css';
 
 function Profile(props) {
-  console.log(styles.container);
-  let [emailModal, setEmailModal] = useState(false);
-  let [deptModal, setDeptModal] = useState(false);
+  // let [emailModal, setEmailModal] = useState(false);
+  // let [deptModal, setDeptModal] = useState(false);
   let icons = ['mail', 'vcard', 'building', 'pencil'];
 
   let [userName, setName] = useState('하냥이');

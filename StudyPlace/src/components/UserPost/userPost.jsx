@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './userPost.module.scss';
 import styled from 'styled-components';
 import { Button, PageHeader } from 'antd';
@@ -12,6 +13,14 @@ const CustomHeader = styled(PageHeader)`
 const PostBtn = styled(CustomBtn)`
   width: 90px;
   height: 35px;
+`;
+
+const ListBtn = styled(CustomBtn)`
+  width: 90px;
+  height: 35px;
+  color: #000000d9;
+  background-color: #fff;
+  margin-right: 10px;
 `;
 
 function UserPost() {
@@ -32,6 +41,9 @@ function UserPost() {
             </div>
           </div>
           <div className={styles.btnWrap}>
+            <Link to='/Notice'>
+              <ListBtn>목록</ListBtn>
+            </Link>
             <PostBtn type='primary'>글쓰기</PostBtn>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './notice.module.scss';
 import styled from 'styled-components';
 import NoticeList from './NoticeList/noticeList';
@@ -32,12 +33,12 @@ const InputBox = styled(Input)`
 `;
 
 function Notice() {
-  const [size, setSize] = useState('large');
-  const [lists, setLists] = useState([]);
+  // const [size, setSize] = useState('large');
+  // const [lists, setLists] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
+  const postsPerPage = 5;
   const [totalPosts, setTotalPosts] = useState(noticeInfo.length);
-  console.log(totalPosts);
+
   const indexOfLast = currentPage * postsPerPage;
   const indexOfFirst = indexOfLast - postsPerPage;
   const currentPosts = (posts) => {
@@ -64,7 +65,9 @@ function Notice() {
           <NoticeList lists={currentPosts(noticeInfo)} />
         </table>
         <section className={styles.bottomMenu}>
-          <PostBtn type='primary'>글쓰기</PostBtn>
+          <Link to='/posting'>
+            <PostBtn type='primary'>글쓰기</PostBtn>
+          </Link>
         </section>
         <section className={styles.pagination}>
           <PaginationCustom postPerPage={postsPerPage} setCurrentPage={setCurrentPage} totalPosts={totalPosts} />

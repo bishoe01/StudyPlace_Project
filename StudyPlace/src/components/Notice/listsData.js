@@ -1,7 +1,7 @@
 export const noticeInfo = [
   {
     number: 1,
-    title: '공지글입니다.',
+    title: ' 2022년도 미국 Carnegie Mellon University AI 집중 교육프로그램 파견 교육생 모집.',
     dept: '소융대',
     date: '2022.09.12',
     views: 2,

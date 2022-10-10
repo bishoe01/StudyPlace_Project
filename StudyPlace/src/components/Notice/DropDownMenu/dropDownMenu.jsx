@@ -7,16 +7,26 @@ import { AiOutlineDown } from 'react-icons/ai';
 
 function DropDownMenu() {
   const [visibility, setVisibility] = useState(false);
+  const [showRotate, setRotate] = useState(false);
   console.log(visibility);
   return (
     <>
       <div className={styles.dropDownMenu}>
         <label
           onClick={() => {
-            setVisibility(!visibility);
+            // setVisibility(!visibility);
+            if (showRotate) {
+              setRotate(!showRotate);
+            } else {
+              setTimeout(() => {
+                setRotate(!showRotate);
+              }, 300);
+            }
           }}>
           <span>제목</span>
-          <AiOutlineDown className={styles.arrow} />
+          <div className={`styles.arrowWrap ${showRotate ? styles.rotate : ''}`}>
+            <AiOutlineDown className={styles.arrow} />
+          </div>
         </label>
         <ul className={`${styles.dropDown} ${visibility ? styles.fadeIn : styles.fadeOut}`}>
           <li>제목</li>

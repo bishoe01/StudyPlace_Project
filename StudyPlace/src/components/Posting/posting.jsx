@@ -2,6 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Editor from '../Editor/editor';
 import styles from './posting.module.scss';
+import styled from 'styled-components';
+import CustomBtn from '../styledComponent/styledComponent';
+
+const baseBtn = styled(CustomBtn)`
+  width: 70px;
+  height: 40px;
+  padding: 5px 3px;
+  font-size: 18px;
+`;
+
+const CancelBtn = styled(baseBtn)`
+  background-color: #fff;
+  margin-right: 10px;
+`;
+const PostBtn = styled(baseBtn)`
+  color: #fff;
+`;
 
 function Posting() {
   return (
@@ -16,10 +33,10 @@ function Posting() {
           </div>
           <div className={styles.postBtnWrap}>
             <Link to='/Notice'>
-              <button className={styles.cancel}>취소</button>
+              <CancelBtn>취소</CancelBtn>
             </Link>
 
-            <button className={styles.posting}>등록</button>
+            <PostBtn type='primary'>등록</PostBtn>
           </div>
         </section>
       </div>

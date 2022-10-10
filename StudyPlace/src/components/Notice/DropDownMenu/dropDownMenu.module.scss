@@ -28,6 +28,16 @@
   }
 }
 
+.arrowWrap .arrow {
+  transform: rotate(180deg);
+  transition: all ease 0.3s;
+}
+
+.rotate .arrow {
+  transform: rotate(180deg);
+  transition: all ease 0.3s;
+}
+
 .dropDown {
   display: none;
   margin: 0;
@@ -46,10 +56,10 @@
   }
 }
 
-.arrow {
-  transform: rotateX(180deg);
-  transition: transform 250ms ease-out;
-}
+// .rotate {
+//   transform: rotateX(180deg);
+//   transition: all ease 0.3s;
+// }
 
 .fadeIn {
   display: block;
