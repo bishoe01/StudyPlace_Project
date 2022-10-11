@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Radio } from 'antd';
 import '../App.scss';
+import { Steps } from 'antd';
 import { Fade, Zoom } from 'react-reveal';
+const { Step } = Steps;
 function Category({ BuildingList, roomInfo }) {
     const [value, setValue] = useState(1);
     const onChange = (e) => {
@@ -12,14 +14,16 @@ function Category({ BuildingList, roomInfo }) {
     const showRoom = (roomName) => {
         setTabRoom(roomName);
     }
-    const [clickBtn, setClickBtn] = useState(false);
-
+    const [clickBtn, setClickBtn] = useState(null);
+    const [current, setCurrent] = useState(0);
     return (
         <Fade top>
-
             <div>
                 <section className='category'>
-                    <h1 className='h1'>카테고리</h1>
+                    <img className='banner' src="https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt=""  />
+                    <div className="step">
+                    <StepSection current={current} />
+                    </div>
                     <div className='category__check'>
                         <div className='check__title'>
                             <span>검색모드</span>
@@ -35,17 +39,24 @@ function Category({ BuildingList, roomInfo }) {
                         <div className='building'>
                             {BuildingList.map((item, index) => {
                                 return (
-                                    <button onClick={() => showRoom(item)}
-                                        style={{ backgroundColor: item===tabRoom ? "#5A8DFF" : " " }}>{item}</button>
-                                )}
+                                    <button onClick={() => {showRoom(item);
+                                        setCurrent(1);
+                                    }}
+                                        style={{ backgroundColor: item === tabRoom ? "#5A8DFF" : " " }}>{item}</button>
+                                )
+                            }
                             )}
                         </div>
                         <div className='number'>
                             {
                                 roomInfo[tabRoom].room.map((item, index) => {
                                     return (
-                                        <button>{item}</button>
-                                    )})
+                                        <button onClick={() => {setClickBtn(item);
+                                            setCurrent(2);}}
+                                            style={{ backgroundColor: item === clickBtn ? "#5A8DFF" : "" }}>
+                                            {item}</button>
+                                    )
+                                })
                             }
                         </div>
                         <div className='people'>
@@ -85,3 +96,12 @@ function RoomTab({ number }) {
         </div>
     )
 }
+
+
+const StepSection = ({current}) => (
+  <Steps size="default" current={current}>
+    <Step title="단과대학 선택" />
+    <Step title="팀플실 선택" />
+    <Step title="이용시간 선택" />
+  </Steps>
+);
