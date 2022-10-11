@@ -12,7 +12,6 @@ import { Zoom } from 'react-reveal';
 
 function App() {
   const BuildingList = [
-    "학술정보관",
     "공학대학",
     "소프트웨어융합대학",
     "과학기술대학",
