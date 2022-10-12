@@ -6,8 +6,8 @@ import '../../App.scss';
 function Department(props) {
     return (
         <div>
-            <section className={styles.graphSection}>
-                <button className={styles.down}><i className={`fa-solid fa-arrow-down`}></i></button>
+            <section className="graphSection">
+                <button className="down"><i className={`fa-solid fa-arrow-down`}></i></button>
             </section>
         <section className={styles.section}>
             <div className={styles.department}>
