@@ -8,11 +8,11 @@
 }
 
 .contentArea {
-  width: 1200px;
+  width: 1300px;
   margin: 0px auto;
 
   .headerWrap {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 
     h3 {
       margin: 0;
@@ -32,7 +32,7 @@
       text-align: center;
       padding: 10px 0;
       background-color: $table-background;
-      border-top: 2px solid $HY-blue;
+      border-top: 3px solid $HY-blue;
       border-bottom: 1px solid #e3e9ed;
     }
   }

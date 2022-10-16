@@ -6,13 +6,7 @@
 .titleInputWrap {
   margin: 5px auto;
   input {
-    width: 100%;
     height: 35px;
-    padding: 3px 7px;
-    border: 1px solid rgb(167, 167, 167);
-    &:focus {
-      outline: 1px solid rgb(122, 122, 122);
-    }
     &::placeholder {
       color: rgb(144, 144, 144);
       font-size: 15px;
@@ -22,5 +16,5 @@
 
 .postBtnWrap {
   text-align: right;
-  margin-top: 15px;
+  margin-top: 5px;
 }

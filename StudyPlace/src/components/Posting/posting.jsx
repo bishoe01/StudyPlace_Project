@@ -4,6 +4,7 @@ import Editor from '../Editor/editor';
 import styles from './posting.module.scss';
 import styled from 'styled-components';
 import CustomBtn from '../styledComponent/styledComponent';
+import { Input } from 'antd';
 
 const baseBtn = styled(CustomBtn)`
   width: 70px;
@@ -26,7 +27,7 @@ function Posting() {
       <div className={styles.postingArea}>
         <section className={styles.postingForm}>
           <div className={styles.titleInputWrap}>
-            <input type='text' placeholder='제목을 입력해주세요.' />
+            <Input placeholder='제목을 입력해주세요.' />
           </div>
           <div className={styles.editorWrap}>
             <Editor />
@@ -35,7 +36,6 @@ function Posting() {
             <Link to='/Notice'>
               <CancelBtn>취소</CancelBtn>
             </Link>
-
             <PostBtn type='primary'>등록</PostBtn>
           </div>
         </section>

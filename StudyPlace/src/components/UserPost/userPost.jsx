@@ -44,7 +44,6 @@ function UserPost() {
             <Link to='/Notice'>
               <ListBtn>목록</ListBtn>
             </Link>
-            <PostBtn type='primary'>글쓰기</PostBtn>
           </div>
         </div>
       </section>
