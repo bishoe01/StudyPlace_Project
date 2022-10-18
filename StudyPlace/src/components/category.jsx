@@ -51,7 +51,7 @@ function Category({ BuildingList, roomInfo }) {
                                 )
                             }
                             )}
-                            <button style={{backgroundColor : "#5A8DFF", color:"white" , fontSize: "20px"}}>팀플실 선택</button>
+                            <button style={{backgroundColor : "#AEBDCA", color:"gray" ,fontSize: "20px"}}>팀플실 선택</button>
                         </div>
 
                         <div className='number'>
@@ -77,7 +77,6 @@ function Category({ BuildingList, roomInfo }) {
                                         style={{
                                             backgroundColor : item.available !== true ? "gray" : "" ,
                                             cursor : item.available !== true ? "not-allowed" : "" ,
-
                                     }}>{`${item.time}`}</button>
                                     )
                                 })

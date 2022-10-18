@@ -65,6 +65,24 @@ function App() {
         description: "투명한 벽으로 구분된 경상대학 팀플실",
         detail: `소프트웨어융합대학 팀플실은 \n 하루 두시간까지만 예약이 가능합니다.`,
         img: "",
+        reserve : [
+          {time : "09:00", available : false},
+          {time : "10:00", available : true},
+          {time : "11:00", available : true},
+          {time : "12:00", available : true},
+          {time : "13:00", available : false},
+          {time : "14:00", available : true},
+          {time : "15:00", available : true},
+          {time : "16:00", available : true},
+          {time : "17:00", available : true},
+          {time : "18:00", available : true},
+          {time : "19:00", available : true},
+          {time : "20:00", available : true},
+          {time : "21:00", available : true},
+          {time : "22:00", available : true},
+          {time : "23:00", available : true},
+          {time : "24:00", available : true},
+        ]
       }
     });
     const [reserve_time, setReserve_time] = useState({
