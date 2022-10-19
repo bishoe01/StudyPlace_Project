@@ -6,17 +6,89 @@ import { Fade, Zoom } from 'react-reveal';
 import { color } from '@chakra-ui/react';
 const { Step } = Steps;
 function Category({ BuildingList, roomInfo }) {
+    let fakedata = {
+        "info": {
+            "id": 1,
+            "studyroom_name": "큐브0",
+            "university": "소프트웨어융합대학",
+            "department": "소프트웨어학부",
+            "location": "제5공학관",
+            "capacity": 10,
+            "descriptions": [
+                "투명한 벽으로 구분된 팀플실"
+            ],
+            "cautions": [
+                "음식물 반입금지",
+                "시끄럽게 떠드는 행위 금지"
+            ],
+            "drinks": [
+                "커피",
+                "물"
+            ],
+            "tags": [
+                "태그1",
+                "태그2"
+            ]
+        },
+        "reservation": [
+            {
+                "year" : "2022",
+                "month": "10",
+                "date" : "19",
+                "name": "홍길동",
+                "startTime": 15,
+                "endTime": 17
+            },
+            {
+                "year" : "2022",
+                "month": "10",
+                "date" : "19",
+                "name": "광개토",
+                "startTime": 17,
+                "endTime": 19
+            },
+            {
+                "year" : "2022",
+                "month": "10",
+                "date" : "19",
+                "name": "이순신",
+                "startTime": 19,
+                "endTime": 21
+            },
+        ]
+    }
+    let today = new Date();
+
     const [value, setValue] = useState(1);
     const onChange = (e) => {
         console.log('radio checked', e.target.value);
         setValue(e.target.value);
     };
-    const [tabRoom, setTabRoom] = useState("경상대학");
-    const showRoom = (roomName) => {
-        setTabRoom(roomName);
+    const [tabRoom, setTabRoom] = useState("1");
+    const showRoom = (date) => {
+        setTabRoom(date);
+        setClickBtn(null);
+    }
+    let reserveDate = [];
+    for (let i = today.getDate(); i < today.getDate() + 7; i++) {
+        reserveDate.push(i);
     }
     const [clickBtn, setClickBtn] = useState(null);
     const [current, setCurrent] = useState(0);
+    // const showDate = (date) => 
+        
+    // }
+    // function search(roomNum,date){
+    //     fakedata["reservation"].forEach((item) => {
+    //         if(item["date"] == date && item["roomNum"] == roomNum){
+    //             const tmp = {...roomInfo};
+    //             tmp["소프트웨어융합대학"].reserve[item] = true;
+    //             roomInfo["소프트웨어융합대학"].reserve[item]= true
+    //         }
+    //     }
+    // }
+    
+    
     return (
         <Fade top>
             <div>
@@ -38,15 +110,16 @@ function Category({ BuildingList, roomInfo }) {
                     </div>
                     <div className='selection'>
                         <div className='building'>
-                            {roomInfo[tabRoom].room.map((item, index) => {
+                            {roomInfo["소프트웨어융합대학"].room.map((item, index) => {
                                 return (
                                     <button onClick={() => {
                                         showRoom(item);
                                         setCurrent(1);
+                                        
                                     }}
-                                    //     style={{ backgroundColor: item === tabRoom ? "#5A8DFF" : " " , 
-                                    //     color: item === tabRoom ? "white" : " " , 
-                                    // }}
+                                        style={{ backgroundColor: item === tabRoom ? "#5A8DFF" : " " , 
+                                        color: item === tabRoom ? "white" : " " , 
+                                    }}
                                     >{item}</button>
                                 )
                             }
@@ -56,7 +129,7 @@ function Category({ BuildingList, roomInfo }) {
 
                         <div className='number'>
                             {
-                                roomInfo[tabRoom].room.map((item, index) => {
+                                roomInfo["소프트웨어융합대학"].room.map((item, index) => {
                                     return (
                                         <button onClick={() => {
                                             setClickBtn(item);
@@ -71,13 +144,17 @@ function Category({ BuildingList, roomInfo }) {
                         {/* Time */}
                         <div className='time'>
                             {
-                                roomInfo[tabRoom].reserve.map((item, index) => {
+                                Object.keys(roomInfo["소프트웨어융합대학"].reserve).map((item, index) => {
                                     return (
                                         <button
+                                        onClick={() => {
+                                            setClickBtn(item);
+                                            setCurrent(3);
+                                        }}
                                         style={{
-                                            backgroundColor : item.available !== true ? "gray" : "" ,
-                                            cursor : item.available !== true ? "not-allowed" : "" ,
-                                    }}>{`${item.time}`}</button>
+                                            backgroundColor : roomInfo["소프트웨어융합대학"].reserve[item] !== true ? "gray" : "" ,
+                                            cursor : roomInfo["소프트웨어융합대학"].reserve[item] !== true ? "not-allowed" : "" ,
+                                    }}>{`${item}:00`}</button>
                                     )
                                 })
                             }
