@@ -7,23 +7,49 @@ import { AiOutlineDown } from 'react-icons/ai';
 
 function DropDownMenu() {
   const [visibility, setVisibility] = useState(false);
-  console.log(visibility);
+  const [filter, setFilter] = useState('제목');
+  const filters = ['제목', '내용', '제목+내용'];
+
+  const ref = useRef();
+  const handleClickOutSide = (e) => {
+    console.log(ref.current.contains(e.target));
+    if (visibility && !ref.current.contains(e.target)) {
+      setVisibility(false);
+    }
+  };
+
+  useEffect(() => {
+    if (visibility) document.addEventListener('mousedown', handleClickOutSide);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutSide);
+    };
+  });
+
   return (
     <>
-      <div className={styles.dropDownMenu}>
+      <div className={styles.dropDownMenu} ref={ref}>
         <label
           onClick={() => {
             setVisibility(!visibility);
           }}>
-          <span>제목</span>
+          <span>{filter}</span>
           <div className={styles.arrowWrap}>
             <AiOutlineDown className={styles.arrow} />
           </div>
         </label>
         <ul className={`${styles.dropDown} ${visibility ? styles.fadeIn : styles.fadeOut}`}>
-          <li>제목</li>
-          <li>내용</li>
-          <li>제목+내용</li>
+          {filters.map((f, i) => {
+            return (
+              <li
+                key={i}
+                onClick={(e) => {
+                  setFilter(e.target.innerText);
+                  setVisibility(!visibility);
+                }}>
+                {f}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>

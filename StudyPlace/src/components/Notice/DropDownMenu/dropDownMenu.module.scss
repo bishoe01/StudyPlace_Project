@@ -10,7 +10,7 @@
 
 .dropDownMenu {
   position: relative;
-  width: 80px;
+  width: 93px;
   label {
     padding: 5px;
     margin: 0;
@@ -46,17 +46,11 @@
   }
 }
 
-// .rotate {
-//   transform: rotateX(180deg);
-//   transition: all ease 0.3s;
-// }
-
 .fadeIn {
   display: block;
 
   @include keyframe(test) {
     0% {
-      // transform: translateY(-5%);
       opacity: 0.3;
     }
 
@@ -65,7 +59,6 @@
     }
 
     100% {
-      // transform: translateY(0);
       opacity: 1;
     }
   }
@@ -74,7 +67,6 @@
     @include keyframe(fadeInAnimation) {
       0% {
         opacity: 0.3;
-        // transform: translateY(-10%);
       }
 
       50% {
@@ -83,41 +75,8 @@
 
       100% {
         opacity: 1;
-        // transform: translateY(0);
       }
     }
     @include animation(fadeInAnimation, 0.1s, linear);
   }
 }
-
-// .fadeOut {
-//   @include keyframe(test) {
-//     0% {
-//       transform: translateY(0);
-//     }
-
-//     100% {
-//       transform: translateY(-5%);
-//       display: none;
-//     }
-//   }
-//   @include animation(test, 0.3s, ease-in);
-//   li {
-//     @include keyframe(fadeOutAnimation) {
-//       0% {
-//         opacity: 1;
-//         transform: translateY(0);
-//       }
-
-//       50% {
-//         opacity: 0.5;
-//       }
-
-//       100% {
-//         opacity: 0;
-//         transform: translateY(-10%);
-//       }
-//     }
-//     @include animation(fadeOutAnimation, 0.3s, ease-in);
-//   }
-// }

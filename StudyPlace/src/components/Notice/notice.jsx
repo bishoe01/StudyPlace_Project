@@ -35,6 +35,7 @@ const InputBox = styled(Input)`
 function Notice() {
   // const [size, setSize] = useState('large');
   // const [lists, setLists] = useState([]);
+  const [searchText, setText] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 5;
   const [totalPosts, setTotalPosts] = useState(noticeInfo.length);
@@ -74,7 +75,12 @@ function Notice() {
         </section>
         <section className={styles.searchWrap}>
           <DropDownMenu />
-          <InputBox placeholder='검색어 입력' />
+          <InputBox
+            placeholder='검색어 입력'
+            onChange={(e) => {
+              setText(e.target.value);
+            }}
+          />
           <SearchBtn type='primary' icon={<SearchOutlined />}>
             검색
           </SearchBtn>
