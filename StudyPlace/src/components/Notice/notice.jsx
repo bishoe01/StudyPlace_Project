@@ -7,7 +7,7 @@ import DropDownMenu from './DropDownMenu/dropDownMenu';
 import PaginationCustom from './Pagination/paginationCustom';
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
-import { noticeInfo } from './listsData.js';
+import { lists } from './listsData.js';
 
 const CustomBtn = styled(Button)`
   font-size: 16px;
@@ -33,20 +33,42 @@ const InputBox = styled(Input)`
 `;
 
 function Notice() {
-  // const [size, setSize] = useState('large');
-  // const [lists, setLists] = useState([]);
   const [searchText, setText] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 5;
-  const [totalPosts, setTotalPosts] = useState(noticeInfo.length);
-
+  const [totalPosts, setTotalPosts] = useState(lists.length);
+  const [list, setList] = useState(lists);
+  const initialList = lists;
   const indexOfLast = currentPage * postsPerPage;
   const indexOfFirst = indexOfLast - postsPerPage;
-  const currentPosts = (posts) => {
-    let currentPosts = 0;
-    currentPosts = posts.slice(indexOfFirst, indexOfLast);
-    return currentPosts;
+  const filterLists = (searchText) => {
+    let currentLists = 0;
+    if (searchText === null || searchText === '') {
+      currentLists = initialList.slice(indexOfFirst, indexOfLast);
+      setTotalPosts(initialList.length);
+    } else {
+      const filteredLists = initialList.filter((row) => row.title.includes(searchText));
+      currentLists = filteredLists.slice(indexOfFirst, indexOfLast);
+      setTotalPosts(currentLists.length);
+    }
+
+    console.log(currentLists);
+    setList(currentLists);
   };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      filterLists(searchText);
+    }
+  };
+  const handleClick = (e) => {
+    filterLists(searchText);
+  };
+
+  useEffect(() => {
+    filterLists(searchText);
+  }, [indexOfFirst, indexOfLast]);
+
   return (
     <div className={styles.contentWrap}>
       <div className={styles.contentArea}>
@@ -56,14 +78,14 @@ function Notice() {
         <table className={styles.noticeTable}>
           <thead>
             <tr>
-              <th>번호</th>
-              <th>제목</th>
-              <th>작성자</th>
-              <th>작성일</th>
-              <th>조회수</th>
+              <th style={{ width: '10%' }}>번호</th>
+              <th style={{ width: '50%' }}>제목</th>
+              <th style={{ width: '20%' }}>작성자</th>
+              <th style={{ width: '10%' }}>작성일</th>
+              <th style={{ width: '10%' }}>조회수</th>
             </tr>
           </thead>
-          <NoticeList lists={currentPosts(noticeInfo)} />
+          <NoticeList lists={list} />
         </table>
         <section className={styles.bottomMenu}>
           <Link to='/posting'>
@@ -80,12 +102,12 @@ function Notice() {
             onChange={(e) => {
               setText(e.target.value);
             }}
+            onKeyPress={handleKeyPress}
           />
-          <SearchBtn type='primary' icon={<SearchOutlined />}>
+          <SearchBtn type='primary' icon={<SearchOutlined />} onClick={handleClick}>
             검색
           </SearchBtn>
         </section>
-        <div></div>
       </div>
     </div>
   );

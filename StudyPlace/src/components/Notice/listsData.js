@@ -1,4 +1,4 @@
-export const noticeInfo = [
+export const lists = [
   {
     number: 1,
     title: ' 2022년도 AI 교육프로그램.',
@@ -141,4 +141,4 @@ export const noticeInfo = [
   },
 ];
 
-export default noticeInfo;
+export default lists;
