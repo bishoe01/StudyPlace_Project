@@ -6,60 +6,74 @@ $quinaryColor: #5A5AFF;
 $senaryColor: #FFA55A;
 $borderColor : #5C5C5C;
 $categorySize : 585px;
+
 @font-face {
   font-family: 'Noto';
   src: url('./fonts/Noto_Sans/NotoSans-Regular.ttf');
 }
+
 @font-face {
   font-family: 'Roboto';
   src: url('./fonts/ROTOBO/Roboto-Regular.ttf');
 }
-*{
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'Roboto';
-  h1,h2,h3,h4,h5,h6{
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     padding: 0;
   }
 }
+
 // Department
 
-.graphSection{
-    width: 100%;
-    height: 1000px;
-    display: flex;
-    background-color: makerLightGrey;
-    border-bottom: 2px solid white;
-    object-fit: cover;
-    object-position: bottom ;
-    border-radius: 10px;
-    overflow:visible;
-    padding: 1px;
-    background-position: center;
+.graphSection {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  background-color: makerLightGrey;
+  border-bottom: 2px solid white;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 10px;
+  overflow: visible;
+  padding: 1px;
+  background-position: center;
 }
-  .department_section{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    .block{
+
+.department_section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  .block {
     font-size: 1.2rem;
     width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:0;
+    margin: 0;
     padding: 0;
     transition: all 300ms ease-in;
     border-radius: 20px;
-    &:hover{
+
+    &:hover {
       transform: scale(1.2);
     }
-    } 
-    .linkDetails{
+  }
+
+  .linkDetails {
     font-family: 'Roboto';
     position: absolute;
     transform: translateY(120px);
@@ -68,19 +82,21 @@ $categorySize : 585px;
     font-weight: 500;
     transition: all 200ms ease-in;
     text-decoration-style: none;
-}
-.logo{
+  }
+
+  .logo {
     border-radius: 20px;
     cursor: pointer;
     margin: 3rem;
     scale: 1.2;
     width: 250px;
     /* transition: all 300ms ease-in; */
+  }
 }
-    }
+
 // category
 
-.category{
+.category {
   display: flex;
   width: 80%;
   margin-left: auto;
@@ -88,48 +104,55 @@ $categorySize : 585px;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  .banner{
+
+  .banner {
     width: 100%;
     height: 400px;
     object-fit: cover;
     object-position: bottom;
     margin-top: 50px;
     border-radius: 20px;
-    
+
   }
-  .step{
+
+  .step {
     width: 80%;
     padding: 40px 0px;
   }
-  .h1{
+
+  .h1 {
     font-family: "Noto";
     font-size: 26px;
     padding: 20px;
   }
-  .category__check{
+
+  .category__check {
     display: flex;
     width: 80%;
     margin: auto;
     align-items: center;
     border-top: 1.2px solid $borderColor;
     border-bottom: 1.2px solid $borderColor;
-  .check__title{
-    padding: 20px;
-    font-size: 20px;
-    background-color: #FAFAFA;
-    
-  }    
-    .check__list{
-    padding-left: 50px;
+
+    .check__title {
+      padding: 20px;
+      font-size: 20px;
+      background-color: #FAFAFA;
+
     }
 
-    .list__radio{
-      .radio{
+    .check__list {
+      padding-left: 50px;
+    }
+
+    .list__radio {
+      .radio {
         padding: 0 40px;
       }
     }
   }
-  .selection{
+
+  .selection {
     display: flex;
     width: 80%;
     height: 1000px;
@@ -137,19 +160,21 @@ $categorySize : 585px;
     padding: 20px 0;
     // height: 600px;
     justify-content: center;
-    .building{
+
+    .building {
       border: 0.5px solid $mainColor;
       border-radius: 5px;
       padding: 10px;
       width: 60%;
       height: $categorySize;
       overflow-y: scroll;
-      
+
       ::-webkit-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      button{
+
+      button {
         background-color: transparent;
         border: 0.5px solid $mainColor;
         border-radius: 5px;
@@ -158,12 +183,14 @@ $categorySize : 585px;
         height: 170px;
         margin: 8px;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
           background-color: $mainColor;
         }
       }
     }
-    .number{
+
+    .number {
       border: 0.5px solid $mainColor;
       border-radius: 5px;
       padding: 20px;
@@ -171,7 +198,8 @@ $categorySize : 585px;
       height: $categorySize;
       margin-left: 5px;
       overflow-y: scroll;
-      button{
+
+      button {
         background-color: transparent;
         border: 0.5px solid $mainColor;
         border-radius: 5px;
@@ -180,11 +208,14 @@ $categorySize : 585px;
         height: 50px;
         margin: 8px;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
           background-color: $mainColor;
         }
       }
-    }.time{
+    }
+
+    .time {
       border: 0.5px solid $mainColor;
       border-radius: 5px;
       padding: 20px;
@@ -192,7 +223,8 @@ $categorySize : 585px;
       height: $categorySize;
       margin-left: 5px;
       overflow-y: scroll;
-      button{
+
+      button {
         background-color: transparent;
         border: 0.5px solid $mainColor;
         border-radius: 5px;
@@ -201,7 +233,8 @@ $categorySize : 585px;
         height: 40px;
         margin: 8px;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
           background-color: $mainColor;
         }
       }
