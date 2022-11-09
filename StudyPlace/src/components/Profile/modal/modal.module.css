@@ -1,0 +1,127 @@
+/* Modal CSS */
+.modalBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+.modalInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 200px); */
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.emailModal {
+  width: 360px;
+  height: 200px;
+}
+
+.deptModal {
+  width: 270px;
+  height: 450px;
+}
+
+.modalHeader {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.modalInputSection {
+  position: relative;
+  border-radius: 4px;
+  border: solid 1px rgba(212, 216, 229, 0.3);
+  background-color: rgba(212, 216, 229, 0.12);
+  margin-top: 4px;
+}
+
+.modalInput {
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  height: 36px;
+  width: 300px;
+  padding: 5px 10px;
+  background-color: rgba(212, 215, 226, 0.1);
+}
+
+.confirmBtn {
+  margin: 15px 5px 5px 5px;
+  width: 58px;
+  height: 32px;
+  border-radius: 5px;
+  color: white;
+  line-height: 20px;
+}
+
+.confirmBtn:first-child {
+  background-color: rgb(101, 103, 114);
+}
+
+.confirmBtn:nth-child(2) {
+  background-color: #2462a2;
+}
+
+.dropDownSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dropDown {
+  text-align: left;
+  position: absolute;
+  background-color: #656565;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.dropDown > li {
+  background-color: #656565;
+  color: white;
+  z-index: 0;
+  width: 194px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 2px 2px 0 15px;
+}
+
+.dropDown > li:hover {
+  background-color: #2462a2;
+}
+
+.dropDownBtn {
+  text-align: left;
+  width: 200px;
+  padding: 5px 5px 0 10px;
+  margin: 2px;
+  color: #333;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.dropDownFrame {
+  position: relative;
+  display: inline-block;
+}
+
+.btnArrow {
+  float: right;
+}

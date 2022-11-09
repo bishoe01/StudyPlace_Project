@@ -1,0 +1,12 @@
+.postingWrap {
+  width: 100%;
+}
+
+.postingArea {
+  width: 1200px;
+  margin: 25px auto 130px;
+}
+
+.postingForm {
+  border: 1px solid black;
+}

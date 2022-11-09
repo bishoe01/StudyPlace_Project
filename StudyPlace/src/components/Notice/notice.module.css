@@ -1,0 +1,50 @@
+:root {
+  --border-color: #e3e9ed;
+  --HY-blue: #2462a2;
+  --text-color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contentWrap {
+  width: 100%;
+}
+
+.contentArea {
+  width: 1200px;
+  margin: 25px auto 130px;
+}
+
+.headerWrap {
+  margin-bottom: 20px;
+}
+
+.headerWrap h3 {
+  font-size: 34px;
+  font-weight: bold;
+}
+.noticeTable th {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #c2d4e7;
+  border-top: 1px solid var(--HY-blue);
+}
+
+.bottomMenu {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.postBtn {
+  padding: 3px 12px;
+  font-size: 17px;
+  background: var(--text-color);
+  color: white;
+}

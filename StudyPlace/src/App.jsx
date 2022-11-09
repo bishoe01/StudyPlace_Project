@@ -4,12 +4,9 @@ import Footer from './components/footer/footer';
 import Navigation from './components/navigation/navigation';
 import { Routes, Route, Link } from "react-router-dom";
 import Rent from './components/Rent/rent';
-import { blue } from '@ant-design/colors';
 import { useState } from 'react';
-import Buttons, { OkBtn } from './components/styled';
 import Category from './components/category';
 import { Zoom } from 'react-reveal';
-
 function App() {
   const BuildingList = [
     "공학대학",
