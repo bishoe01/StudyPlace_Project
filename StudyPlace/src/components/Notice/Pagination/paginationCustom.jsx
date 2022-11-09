@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import styles from './paginationCustom.module.css';
+import React, { useState } from 'react';
 import { Pagination } from 'antd';
 
 function PaginationCustom({ postPerPage, setCurrentPage, totalPosts }) {

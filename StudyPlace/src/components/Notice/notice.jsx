@@ -44,17 +44,21 @@ function Notice() {
   const filterLists = (searchText) => {
     let currentLists = 0;
     if (searchText === null || searchText === '') {
-      currentLists = initialList.slice(indexOfFirst, indexOfLast);
       setTotalPosts(initialList.length);
+      currentLists = initialList.slice(indexOfFirst, indexOfLast);
+      console.log('slice');
     } else {
       const filteredLists = initialList.filter((row) => row.title.includes(searchText));
+      setTotalPosts(filteredLists.length);
       currentLists = filteredLists.slice(indexOfFirst, indexOfLast);
-      setTotalPosts(currentLists.length);
+      console.log('filtered slice');
     }
-
-    console.log(currentLists);
     setList(currentLists);
   };
+
+  useEffect(() => {
+    setTotalPosts();
+  }, [list]);
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
