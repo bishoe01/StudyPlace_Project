@@ -11,7 +11,7 @@ function Footer(props) {
                     <h6 className={styles.tel}>TEL +82-10-3733-0690</h6>
                     <h6 className={styles.email}>Email : contact@hanyang.ac.kr</h6>
                 </p>
-                <span className={styles.copyright}>Copyright 2022 Hanyang Univ. All Rights Reserved.</span>
+                <span className={styles.copyright}>2022 Hanyang Univ. All Rights Reserved.</span>
             </section>
             <section className={styles.rightContainer}>
                 <ul className={styles.links} >

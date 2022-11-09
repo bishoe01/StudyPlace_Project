@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fortawesome/fontawesome-free/js/all.js';
 import { BrowserRouter } from 'react-router-dom';
-
+import 'antd/dist/antd.min.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
